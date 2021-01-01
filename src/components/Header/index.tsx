@@ -1,19 +1,37 @@
+import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { Logo } from './Logo';
-import { Theme } from './Theme';
+
+const HeaderWrapper = styled.header`
+  padding: 1rem 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.1em solid #272727;
+`;
+
+const LinkStyles = {
+  margin: '0 0.7em',
+  textDecoration: 'none',
+  color: 'inherit',
+};
 
 export const Header = () => {
   return (
-    <header>
+    <HeaderWrapper>
       <Logo />
 
       <nav>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/apps">Apps</Link>
+        <Link style={LinkStyles} to="/">
+          HOME
+        </Link>
+        <Link style={LinkStyles} to="/about">
+          ABOUT
+        </Link>
+        <Link style={LinkStyles} to="/apps">
+          APPS
+        </Link>
       </nav>
-
-      <Theme />
-    </header>
+    </HeaderWrapper>
   );
 };

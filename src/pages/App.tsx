@@ -9,8 +9,12 @@ import { NoMatch } from './NoMatch';
 
 const AppWrapper = styled.div`
   min-height: 100vh;
-  background: #000;
+  background: #080808;
   color: #fff;
+`;
+
+const PageWrapper = styled.div`
+  padding: 2rem 25%;
 `;
 
 export const App = () => {
@@ -20,18 +24,20 @@ export const App = () => {
         <Header />
 
         <Switch>
-          <Route exact strict path="/">
-            <Home />
-          </Route>
-          <Route exact strict path="/about">
-            <About />
-          </Route>
-          <Route exact strict path="/apps">
-            <Apps />
-          </Route>
-          <Route>
-            <NoMatch />
-          </Route>
+          <PageWrapper>
+            <Route exact strict path="/">
+              <Home />
+            </Route>
+            <Route exact strict path="/about">
+              <About />
+            </Route>
+            <Route exact strict path="/apps">
+              <Apps />
+            </Route>
+            <Route exact strict path="/*">
+              <NoMatch />
+            </Route>
+          </PageWrapper>
         </Switch>
       </AppWrapper>
     </HashRouter>
