@@ -1,6 +1,6 @@
 const LogoStyles = {
-  width: '3em',
-  height: '3em',
+  width: '2.8em',
+  height: '2.8em',
   fill: '#fff',
 };
 

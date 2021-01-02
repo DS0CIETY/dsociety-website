@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const HomeSection = styled.section`
+  padding-top: 5vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,33 +9,21 @@ const HomeSection = styled.section`
 `;
 
 const HomeTitle = styled.h1`
-  font-size: 3em;
+  font-size: 4.2em;
+  text-align: center;
 `;
 
-const ChoiceButton = styled.button`
-  margin: 0.3em;
-  padding: 1em;
-  border-radius: 2rem;
-  border: 0.1rem solid #333;
-  font-size: 3em;
-  background-color: transparent;
-  color: #fff;
-`;
-
-const RedChar = styled.span`
-  color: var(--brand-color);
+const SpecialChar = styled.span`
+  opacity: 0.2;
 `;
 
 export const Home = () => {
   return (
     <HomeSection>
       <HomeTitle>
-        <RedChar>0</RedChar>ne or Zer<RedChar>0</RedChar>, your ch<RedChar>0</RedChar>ice
+        A place where you can <SpecialChar>be yourself</SpecialChar>, of course
+        if you know <SpecialChar>who you are..</SpecialChar>
       </HomeTitle>
-      <div>
-        <ChoiceButton>0</ChoiceButton>
-        <ChoiceButton>1</ChoiceButton>
-      </div>
     </HomeSection>
   );
 };

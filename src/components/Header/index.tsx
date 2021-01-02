@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 import { Logo } from './Logo';
 
 const HeaderWrapper = styled.header`
-  padding: 1rem 25%;
+  padding: 0.8rem 25%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 0.1em solid #272727;
+  border-bottom: 0.1em solid #333;
 `;
 
 const LinkStyles = {
@@ -28,10 +28,11 @@ export const Header = () => {
         <Link style={LinkStyles} to="/about">
           ABOUT
         </Link>
-        <Link style={LinkStyles} to="/apps">
-          APPS
+        <Link style={LinkStyles} to="/ideas">
+          IDEAS
         </Link>
       </nav>
+      {/* languages toggle */}
     </HeaderWrapper>
   );
 };

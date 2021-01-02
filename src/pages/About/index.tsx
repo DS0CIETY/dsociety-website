@@ -1,18 +1,25 @@
+import styled from 'styled-components';
+
+const AboutSection = styled.section`
+  padding-top: 5vw;
+  font-size: 1.5em;
+`;
+
 export const About = () => {
   return (
-    <section>
+    <AboutSection>
       <h2>About our movement</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate labore voluptate in. Rerum repellendus
-        dignissimos eum! Minus, libero quod placeat sequi dignissimos fuga magni. Sequi voluptatum nostrum doloremque
-        velit necessitatibus.
+        What and why. We do not know. Just a group of those who want to change
+        or create something. We do not hope that anyone will join us. Anyone who
+        wants to do this will do it. Let's dwell on this thought
       </p>
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est asperiores magni explicabo qui sint impedit at eum
-        tenetur dolores nostrum voluptatem dolorem laudantium quisquam ab aut, sequi labore quaerat earum libero
-        inventore quas voluptas. Vero quasi, eum nulla reprehenderit enim quis quo soluta eligendi esse necessitatibus
-        officia harum, quidem neque veritatis ducimus debitis laudantium sunt repudiandae modi totam aspernatur minus.
+        We are trying to start doing something useful and it does not depend on
+        what you can. In any case, if you are with us, you will have to learn.
+        It's like a hobby that can become something more. We work as long as
+        there is time and do not have any deadlines.
       </p>
-    </section>
+    </AboutSection>
   );
 };
