@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { GlitchItem } from '../../components';
 
 const IdeasSection = styled.section`
   padding-top: 5vw;
@@ -14,6 +15,8 @@ const IdeasList = styled.ul`
 const IdeaItem = styled.li`
   margin: 0 0 1em;
   padding: 1rem;
+  display: flex;
+  justify-content: space-between;
   background: linear-gradient(
     90deg,
     hsla(0, 0%, 10%, 1) 0%,
@@ -25,9 +28,10 @@ export const Ideas = () => {
   return (
     <IdeasSection>
       <IdeasList>
-        <IdeaItem>First</IdeaItem>
-        <IdeaItem>Second</IdeaItem>
-        <IdeaItem>Third</IdeaItem>
+        <IdeaItem>
+          <GlitchItem>Crypto Bot</GlitchItem>
+          <span>(soon)</span>
+        </IdeaItem>
       </IdeasList>
     </IdeasSection>
   );

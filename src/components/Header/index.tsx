@@ -1,13 +1,17 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { Logo } from './Logo';
+import { GlitchItem } from '../GlitchItem';
 
 const HeaderWrapper = styled.header`
   padding: 0.8rem 25%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   border-bottom: 0.1em solid #333;
+`;
+
+const Nav = styled.nav`
+  white-space: nowrap;
 `;
 
 const LinkStyles = {
@@ -16,23 +20,41 @@ const LinkStyles = {
   color: 'inherit',
 };
 
+const LangWrapper = styled.div`
+  margin-left: 1em;
+`;
+
+const LangButton = styled.button`
+  border: none;
+  opacity: 0.5;
+  background-color: transparent;
+  color: inherit;
+`;
+
 export const Header = () => {
   return (
     <HeaderWrapper>
-      <Logo />
+      <div style={{ flex: '1' }}>
+        <Logo />
+      </div>
 
-      <nav>
+      <Nav>
         <Link style={LinkStyles} to="/">
-          HOME
+          <GlitchItem>HOME</GlitchItem>
         </Link>
         <Link style={LinkStyles} to="/about">
-          ABOUT
+          <GlitchItem>ABOUT</GlitchItem>
         </Link>
         <Link style={LinkStyles} to="/ideas">
-          IDEAS
+          <GlitchItem>IDEAS</GlitchItem>
         </Link>
-      </nav>
-      {/* languages toggle */}
+      </Nav>
+
+      <LangWrapper>
+        <LangButton>EN</LangButton>
+        {'｜'}
+        <LangButton>RU</LangButton>
+      </LangWrapper>
     </HeaderWrapper>
   );
 };

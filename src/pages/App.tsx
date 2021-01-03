@@ -5,7 +5,6 @@ import { Header } from '../components/Header';
 import { About } from './About';
 import { Ideas } from './Ideas';
 import { Home } from './Home';
-// import { NoMatch } from './NoMatch';
 
 const AppWrapper = styled.div`
   min-height: 100vh;
@@ -26,9 +25,8 @@ export const App = () => {
         <Switch>
           <PageWrapper>
             <Route exact strict path="/" component={Home} />
-            <Route exact strict path="/about" component={About} />
-            <Route exact strict path="/ideas" component={Ideas} />
-            {/* <Route exact strict path="/*" component={NoMatch} /> */}
+            <Route strict path="/about" component={About} />
+            <Route strict path="/ideas" component={Ideas} />
           </PageWrapper>
         </Switch>
       </AppWrapper>

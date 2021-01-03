@@ -9,8 +9,7 @@ const HomeSection = styled.section`
 `;
 
 const HomeTitle = styled.h1`
-  font-size: 4.2em;
-  text-align: center;
+  font-size: 4.3em;
 `;
 
 const SpecialChar = styled.span`
