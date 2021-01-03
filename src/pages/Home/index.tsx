@@ -26,7 +26,7 @@ export const Home = () => {
     <HomeSection>
       <HomeTitle>
         A place where you can <SpecialChar>be yourself</SpecialChar>, of course
-        if you know <SpecialChar>who you are..</SpecialChar>
+        if you know <SpecialChar>who you are...</SpecialChar>
       </HomeTitle>
       {/* <div>
         <svg
