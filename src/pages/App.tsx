@@ -9,7 +9,6 @@ import AppGif from './AppGif.gif';
 
 const AppWrapper = styled.div`
   min-height: 100vh;
-  background-color: #0007;
   color: #fefefe;
 `;
 
@@ -30,7 +29,7 @@ export const App = () => {
           width: '100vw',
         }}
         src={AppGif}
-        alt="gif with underground"
+        alt="gif with forest"
       />
       <AppWrapper>
         <Header />

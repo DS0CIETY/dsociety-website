@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import { GlitchItem } from '../../components';
 
 const IdeasSection = styled.section`
-  padding-top: 5vw;
+  padding-top: 3vw;
   font-size: 1.5em;
 `;
 
@@ -26,7 +25,7 @@ export const Ideas = () => {
     <IdeasSection>
       <IdeasList>
         <IdeaItem>
-          <GlitchItem>Crypto Bot</GlitchItem>
+          <span>TG Crypto Bot</span>
           <span>(in progress)</span>
         </IdeaItem>
       </IdeasList>

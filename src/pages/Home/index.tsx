@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const HomeSection = styled.section`
-  padding-top: 5vw;
+  padding-top: 3vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,26 +9,28 @@ const HomeSection = styled.section`
 `;
 
 const HomeTitle = styled.h1`
-  font-size: 4.3em;
+  font-size: 4em;
 `;
 
-const SpecialChar = styled.span`
+const SpecChar = styled.span`
   opacity: 0.2;
 `;
 
-// const SvgStyles = {
-//   width: '2em',
-//   height: '2em',
-// };
+const SvgStyles = {
+  width: '4em',
+  height: '4em',
+  margin: '.5em',
+};
 
 export const Home = () => {
   return (
     <HomeSection>
       <HomeTitle>
-        A place where you can <SpecialChar>be yourself</SpecialChar>, of course
-        if you know <SpecialChar>who you are...</SpecialChar>
+        A place where you can <SpecChar>be yourself</SpecChar>,{' '}
+        <SpecChar>change something</SpecChar>, of course if you know{' '}
+        <SpecChar>who you are..</SpecChar>
       </HomeTitle>
-      {/* <div>
+      <div>
         <svg
           style={{ ...SvgStyles, fill: 'var(--brand-color)' }}
           x="0px"
@@ -61,7 +63,7 @@ export const Home = () => {
 			c18.125-18.135,42.229-28.115,67.875-28.115c52.938,0,96,43.063,96,96C426.667,164.312,416.688,188.427,398.542,206.562z"
           />
         </svg>
-      </div> */}
+      </div>
     </HomeSection>
   );
 };
