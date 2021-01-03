@@ -5,11 +5,12 @@ import { Header } from '../components/Header';
 import { About } from './About';
 import { Ideas } from './Ideas';
 import { Home } from './Home';
+import AppGif from './AppGif.gif';
 
 const AppWrapper = styled.div`
   min-height: 100vh;
-  background: #080808;
-  color: #fff;
+  background-color: #0007;
+  color: #fefefe;
 `;
 
 const PageWrapper = styled.div`
@@ -19,6 +20,18 @@ const PageWrapper = styled.div`
 export const App = () => {
   return (
     <HashRouter>
+      <img
+        style={{
+          position: 'fixed',
+          top: '0',
+          left: '0',
+          zIndex: -1,
+          height: '100vh',
+          width: '100vw',
+        }}
+        src={AppGif}
+        alt="gif with underground"
+      />
       <AppWrapper>
         <Header />
 

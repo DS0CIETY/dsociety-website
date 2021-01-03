@@ -17,11 +17,8 @@ const IdeaItem = styled.li`
   padding: 1rem;
   display: flex;
   justify-content: space-between;
-  background: linear-gradient(
-    90deg,
-    hsla(0, 0%, 10%, 1) 0%,
-    hsla(0, 0%, 3%, 1) 100%
-  );
+  border: 0.1rem solid var(--black);
+  background-color: #0005;
 `;
 
 export const Ideas = () => {
@@ -30,7 +27,7 @@ export const Ideas = () => {
       <IdeasList>
         <IdeaItem>
           <GlitchItem>Crypto Bot</GlitchItem>
-          <span>(soon)</span>
+          <span>(in progress)</span>
         </IdeaItem>
       </IdeasList>
     </IdeasSection>

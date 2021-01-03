@@ -4,13 +4,15 @@ import { Logo } from './Logo';
 import { GlitchItem } from '../GlitchItem';
 
 const HeaderWrapper = styled.header`
-  padding: 0.8rem 25%;
+  padding: 0 25%;
   display: flex;
   align-items: center;
-  border-bottom: 0.1em solid #333;
+  border-bottom: 0.1rem solid var(--black);
+  background-color: #0003;
 `;
 
 const Nav = styled.nav`
+  font-size: 1.3em;
   white-space: nowrap;
 `;
 
@@ -19,17 +21,6 @@ const LinkStyles = {
   textDecoration: 'none',
   color: 'inherit',
 };
-
-const LangWrapper = styled.div`
-  margin-left: 1em;
-`;
-
-const LangButton = styled.button`
-  border: none;
-  opacity: 0.5;
-  background-color: transparent;
-  color: inherit;
-`;
 
 export const Header = () => {
   return (
@@ -49,12 +40,7 @@ export const Header = () => {
           <GlitchItem>IDEAS</GlitchItem>
         </Link>
       </Nav>
-
-      <LangWrapper>
-        <LangButton>EN</LangButton>
-        {'｜'}
-        <LangButton>RU</LangButton>
-      </LangWrapper>
+      {/* submenu with time and languages ? (en / ru) */}
     </HeaderWrapper>
   );
 };
