@@ -3,12 +3,13 @@ import styled from 'styled-components';
 import { HashRouter, Switch, Route } from 'react-router-dom';
 import { Header } from '../components/Header';
 import { About } from './About';
-import { Ideas } from './Ideas';
+import { Projects } from './Projects';
 import { Home } from './Home';
-import AppGif from './AppGif.gif';
+import Background from './background.png';
 
 const AppWrapper = styled.div`
   min-height: 100vh;
+  background-color: #0009;
   color: #fefefe;
 `;
 
@@ -22,14 +23,14 @@ export const App = () => {
       <img
         style={{
           position: 'fixed',
-          top: '0',
-          left: '0',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
           zIndex: -1,
-          height: '100vh',
           width: '100vw',
         }}
-        src={AppGif}
-        alt="gif with forest"
+        src={Background}
+        alt="dark city"
       />
       <AppWrapper>
         <Header />
@@ -38,7 +39,7 @@ export const App = () => {
           <PageWrapper>
             <Route exact strict path="/" component={Home} />
             <Route strict path="/about" component={About} />
-            <Route strict path="/ideas" component={Ideas} />
+            <Route strict path="/projects" component={Projects} />
           </PageWrapper>
         </Switch>
       </AppWrapper>

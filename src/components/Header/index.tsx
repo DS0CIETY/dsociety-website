@@ -7,7 +7,7 @@ const HeaderWrapper = styled.header`
   display: flex;
   align-items: center;
   border-bottom: 0.1rem solid #222;
-  background-color: #0004;
+  background-color: #09090990;
 `;
 
 const Nav = styled.nav`
@@ -35,7 +35,7 @@ export const Header = () => {
         <Link style={LinkStyles} to="/about">
           ABOUT
         </Link>
-        <Link style={LinkStyles} to="/ideas">
+        <Link style={LinkStyles} to="/projects">
           IDEAS
         </Link>
       </Nav>
