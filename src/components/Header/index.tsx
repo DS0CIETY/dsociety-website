@@ -36,7 +36,7 @@ export const Header = () => {
           ABOUT
         </Link>
         <Link style={LinkStyles} to="/projects">
-          IDEAS
+          PROJECTS
         </Link>
       </Nav>
       {/* submenu with time and languages ? (en / ru) */}

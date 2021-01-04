@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const ProjectsSection = styled.section`
-  padding-top: 3vw;
+  padding-top: 4vw;
   font-size: 1.5em;
 `;
 
@@ -16,6 +16,7 @@ const ProjectsItem = styled.li`
   padding: 1rem;
   display: flex;
   justify-content: space-between;
+  border-radius: 0.4em;
   border: 0.1rem solid #222;
   background-color: #09090990;
 `;
@@ -23,13 +24,15 @@ const ProjectsItem = styled.li`
 export const Projects = () => {
   return (
     <ProjectsSection>
-      {/* form for send user ideas */}
-
       <ProjectsList>
         <ProjectsItem>
-          <span>Bot</span>
+          {/* TODO: tooltip with description */}
+          <span>Luckyswap</span>
           <span>(progress)</span>
         </ProjectsItem>
+        {/* Osint tool */}
+        {/* Crypto bot */}
+        {/* Site scrapper */}
       </ProjectsList>
     </ProjectsSection>
   );
