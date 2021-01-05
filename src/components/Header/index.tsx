@@ -11,7 +11,7 @@ const HeaderWrapper = styled.header`
 `;
 
 const Nav = styled.nav`
-  font-size: 1.3em;
+  font-size: 1.2em;
   white-space: nowrap;
 `;
 
@@ -37,6 +37,9 @@ export const Header = () => {
         </Link>
         <Link style={LinkStyles} to="/projects">
           PROJECTS
+        </Link>
+        <Link style={LinkStyles} to="/contacts">
+          CONTACTS
         </Link>
       </Nav>
       {/* submenu with time and languages ? (en / ru) */}

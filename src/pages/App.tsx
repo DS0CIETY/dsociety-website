@@ -2,9 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import { HashRouter, Switch, Route } from 'react-router-dom';
 import { Header } from '../components/Header';
+import { Home } from './Home';
 import { About } from './About';
 import { Projects } from './Projects';
-import { Home } from './Home';
+import { Contacts } from './Contacts';
 import Background from './background.png';
 
 const AppWrapper = styled.div`
@@ -40,6 +41,7 @@ export const App = () => {
             <Route exact strict path="/" component={Home} />
             <Route strict path="/about" component={About} />
             <Route strict path="/projects" component={Projects} />
+            <Route strict path="/contacts" component={Contacts} />
           </PageWrapper>
         </Switch>
       </AppWrapper>

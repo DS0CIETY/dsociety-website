@@ -1,3 +1,3 @@
-# Dark Zone
+# DSOCIETY
+## Join
 
-### Draft
