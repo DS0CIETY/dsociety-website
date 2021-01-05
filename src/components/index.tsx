@@ -1,4 +1,4 @@
 import { Header } from './Header';
-import { Modal } from './Modal';
+import { Link } from './Link';
 
-export { Header, Modal };
+export { Header, Link };

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from '../../components/Link';
 
 const ContactsSection = styled.section`
   padding-top: 3vw;
@@ -7,26 +8,36 @@ const ContactsSection = styled.section`
   justify-content: center;
 `;
 
-const SocialList = styled.ul``;
+const SocialList = styled.ul`
+  margin: 0;
+  padding: 0;
+  list-style: none;
+`;
 
-const SocialLink = styled.a``;
+const SocialListItem = styled.li`
+  margin: 1.3em 0;
+  font-size: 2.3em;
+`;
 
 export const Contacts = () => {
   return (
     <ContactsSection>
       <SocialList>
-        <li>
-          <SocialLink href="#">MEDIUM</SocialLink>
-        </li>
-        <li>
-          <SocialLink href="#">TWITTER</SocialLink>
-        </li>
-        <li>
-          <SocialLink href="#">GITHUB</SocialLink>
-        </li>
-        <li>
-          <SocialLink href="mailto:ds0c1ety@protonmail.ch">MAIL</SocialLink>
-        </li>
+        <SocialListItem>
+          <Link href="https://medium.com/@dsociety">MEDIUM</Link>
+        </SocialListItem>
+
+        <SocialListItem>
+          <Link href="https://twitter.com/dsociety3">TWITTER</Link>
+        </SocialListItem>
+
+        <SocialListItem>
+          <Link href="https://github.com/DS0CIETY">GITHUB</Link>
+        </SocialListItem>
+
+        <SocialListItem>
+          <Link href="mailto:ds0c1ety@protonmail.ch">MAIL</Link>
+        </SocialListItem>
       </SocialList>
     </ContactsSection>
   );

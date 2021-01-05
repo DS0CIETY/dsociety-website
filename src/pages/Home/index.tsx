@@ -12,11 +12,11 @@ const HomeTitle = styled.h1`
 `;
 
 const SpecChar = styled.span`
-  opacity: 0.2;
+  opacity: 0.3;
 `;
 
 const Quote = styled.blockquote`
-  margin: 3vh 0 0;
+  margin: 0;
   opacity: 0.5;
 `;
 
@@ -25,10 +25,9 @@ export const Home = () => {
     <HomeSection>
       <HomeTitle>
         A place where you can <SpecChar>be yourself</SpecChar>,{' '}
-        <SpecChar>change something</SpecChar>, of course if you know{' '}
-        <SpecChar>who you are..</SpecChar>
+        <SpecChar>change something</SpecChar>,
+        <SpecChar> improve this world.</SpecChar> Join us.
       </HomeTitle>
-
       <Quote>Try not to forget who you are</Quote>
     </HomeSection>
   );

@@ -7,7 +7,7 @@ const HeaderWrapper = styled.header`
   display: flex;
   align-items: center;
   border-bottom: 0.1rem solid #222;
-  background-color: #09090990;
+  background-color: #09090980;
 `;
 
 const Nav = styled.nav`
@@ -42,7 +42,7 @@ export const Header = () => {
           CONTACTS
         </Link>
       </Nav>
-      {/* submenu with time and languages ? (en / ru) */}
+      {/* submenu with time and languages (en / ru) */}
     </HeaderWrapper>
   );
 };

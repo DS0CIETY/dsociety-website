@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+
 import { HashRouter, Switch, Route } from 'react-router-dom';
 import { Header } from '../components/Header';
 import { Home } from './Home';
 import { About } from './About';
 import { Projects } from './Projects';
 import { Contacts } from './Contacts';
+
 import Background from './background.png';
 
 const AppWrapper = styled.div`

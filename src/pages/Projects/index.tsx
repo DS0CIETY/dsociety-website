@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import { Link } from '../../components/Link';
 
 const ProjectsSection = styled.section`
-  padding-top: 4vw;
+  padding-top: 3vw;
   font-size: 1.5em;
 `;
 
@@ -12,13 +13,8 @@ const ProjectsList = styled.ul`
 `;
 
 const ProjectsItem = styled.li`
-  margin: 0 0 1em;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  border-radius: 0.4em;
-  border: 0.1rem solid #222;
-  background-color: #09090990;
+  margin: 1.3em 0;
+  font-size: 1.8em;
 `;
 
 export const Projects = () => {
@@ -26,13 +22,8 @@ export const Projects = () => {
     <ProjectsSection>
       <ProjectsList>
         <ProjectsItem>
-          {/* TODO: tooltip with description */}
-          <span>Luckyswap</span>
-          <span>(progress)</span>
+          <Link href="https://github.com/DS0CIETY/luckyswap">Luckyswap</Link>
         </ProjectsItem>
-        {/* Osint tool */}
-        {/* Crypto bot */}
-        {/* Site scrapper */}
       </ProjectsList>
     </ProjectsSection>
   );
