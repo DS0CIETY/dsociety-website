@@ -1,7 +1,7 @@
 {
-  "name": "dark-zone",
-  "description": "draft project",
-  "homepage": ".",
+  "name": "dsociety",
+  "description": "dsociety",
+  "homepage": "https://ds0ciety.github.io/dsociety-website/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,6 +12,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -37,6 +38,7 @@
     "@types/react-dom": "^17.0.0",
     "@types/react-router-dom": "^5.1.7",
     "@types/styled-components": "^5.1.7",
+    "gh-pages": "^3.1.0",
     "node-sass": "^5.0.0",
     "prettier": "2.2.1",
     "react-router-dom": "^5.2.0",
