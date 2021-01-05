@@ -1,3 +1,1 @@
 # DSOCIETY
-## Join
-
