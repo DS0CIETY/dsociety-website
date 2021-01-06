@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link } from '../../components/Link';
+// import { Link } from '../../components/Link';
 
 const ProjectsSection = styled.section`
   padding-top: 3vw;
@@ -21,9 +21,7 @@ export const Projects = () => {
   return (
     <ProjectsSection>
       <ProjectsList>
-        <ProjectsItem>
-          <Link href="https://github.com/DS0CIETY/luckyswap">Luckyswap</Link>
-        </ProjectsItem>
+        <ProjectsItem></ProjectsItem>
       </ProjectsList>
     </ProjectsSection>
   );
