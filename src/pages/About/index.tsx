@@ -11,7 +11,7 @@ const AboutMainInfo = styled.div`
 
 const Quote = styled.blockquote`
   margin: 7vh 0 0;
-  opacity: 0.5;
+  opacity: 0.3;
 `;
 
 export const About = () => {

@@ -29,5 +29,9 @@ type LinkProps = {
 export const Link = (props: LinkProps) => {
   const { href, children } = props;
 
-  return <LinkItem href={href}>{children}</LinkItem>;
+  return (
+    <LinkItem href={href} target="_blank">
+      {children}
+    </LinkItem>
+  );
 };

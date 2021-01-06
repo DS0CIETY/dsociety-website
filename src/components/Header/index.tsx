@@ -6,8 +6,8 @@ const HeaderWrapper = styled.header`
   padding: 1rem 25%;
   display: flex;
   align-items: center;
-  border-bottom: 0.1rem solid #222;
-  background-color: #09090980;
+  border-bottom: 0.1rem solid #252525;
+  background-color: #1119;
 `;
 
 const Nav = styled.nav`

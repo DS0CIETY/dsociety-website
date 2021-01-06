@@ -8,12 +8,10 @@ import { About } from './About';
 import { Projects } from './Projects';
 import { Contacts } from './Contacts';
 
-import Background from './background.png';
-
 const AppWrapper = styled.div`
   min-height: 100vh;
-  background-color: #0009;
-  color: #fefefe;
+  background-color: var(--black);
+  color: var(--white);
 `;
 
 const PageWrapper = styled.div`
@@ -23,18 +21,6 @@ const PageWrapper = styled.div`
 export const App = () => {
   return (
     <HashRouter>
-      <img
-        style={{
-          position: 'fixed',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          zIndex: -1,
-          width: '100vw',
-        }}
-        src={Background}
-        alt="dark city"
-      />
       <AppWrapper>
         <Header />
 

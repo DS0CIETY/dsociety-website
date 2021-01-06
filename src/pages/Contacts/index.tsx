@@ -36,7 +36,7 @@ export const Contacts = () => {
         </SocialListItem>
 
         <SocialListItem>
-          <Link href="mailto:ds0c1ety@protonmail.ch">MAIL</Link>
+          <Link href="https://t.me/dsoc1ety">TELEGRAM</Link>
         </SocialListItem>
       </SocialList>
     </ContactsSection>

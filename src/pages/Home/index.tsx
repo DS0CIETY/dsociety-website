@@ -17,7 +17,7 @@ const SpecChar = styled.span`
 
 const Quote = styled.blockquote`
   margin: 0;
-  opacity: 0.5;
+  opacity: 0.3;
 `;
 
 export const Home = () => {
