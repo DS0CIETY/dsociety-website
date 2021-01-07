@@ -4,7 +4,6 @@
     <title>dsociety</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <!-- Twitter meta -->
     <meta property="og:type" content="profile" />
     <meta property="og:title" content="DSOCIETY" />
@@ -13,18 +12,15 @@
     <meta property="og:url" content="https://dsoc1ety.org" />
     <meta property="og:site_name" content="DSOCIETY" />
     <meta property="og:see_also" content="https://dsoc1ety.org" />
-
+    <!-- Styles -->
     <link rel="stylesheet" href="./css/index.css" />
   </head>
 
   <body>
-    <header>
+    <header id="header">
       <a href=".">
         <svg class="icon icon__logo" viewBox="0 0 486.000000 861.000000">
-          <g
-            transform="translate(-200.000000, 1250.000000) scale(0.18, -0.18)"
-            stroke="none"
-          >
+          <g transform="translate(-200.000000, 1250.000000) scale(0.18, -0.18)" stroke="none">
             <path
               d="M2120 5754 c13 -21 45 -74 72 -116 26 -43 48 -80 48 -83 0 -3 -422
   -5 -937 -5 l-938 0 -21 -54 -21 -54 231 -231 232 -231 52 0 c44 0 377 70 782
@@ -59,7 +55,7 @@
         </svg>
       </a>
       <div class="header__theme">
-        <input type="checkbox" id="theme-checkbox" hidden />
+        <input type="checkbox" id="theme-checkbox" />
         <label for="theme-checkbox" class="theme-fakecheckbox"></label>
       </div>
     </header>
@@ -69,11 +65,10 @@
         <!-- SEO title -->
         <h1 hidden>DSOCIETY</h1>
         <h2 class="intro__subtitle">WE CREATE OUR OWN FUTURE</h2>
-        <!-- <button class="intro__btn-join">JOIN</button> -->
-        <!-- Down arrow -->
+        <button class="intro__btn-join">JOIN</button>
         <a href="#about-section">
           <svg
-            class="icon icon__down-arrow"
+            class="icon icon__arrow"
             xmlns="http://www.w3.org/2000/svg"
             x="0px"
             y="0px"
@@ -91,25 +86,28 @@
       <section class="about" id="about-section">
         <h2 class="about__title">Our movement</h2>
         <p class="about__description">
-          Just a group of those who want to change or create something. We're
-          trying to start doing something useful, and it doesn't depend on your
-          ability. It's like a hobby that can become something big. There are no
-          deadlines, no clear rules. Everyone has their own, but everyone can
-          offer something to improve our society, change something, maybe the
-          whole world. Or is it better to create a new society? Your choice.
+          Just a group of those who want to change or create something. We're trying to start doing something useful,
+          and it doesn't depend on your ability. It's like a hobby that can become something big. There are no
+          deadlines, no clear rules. Everyone has their own, but everyone can offer something to improve our society,
+          change something, maybe the whole world. Or is it better to create a new society? Your choice.
         </p>
       </section>
     </main>
 
     <footer>
+      <a style="transform: rotateZ(180deg); margin-bottom: 1rem" href="#header">
+        <svg class="icon icon__arrow" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 511.998 511.998">
+          <path
+            d="M509.04,131.296c-4.063-4.24-10.802-4.406-15.083-0.333L255.999,358.577L18.04,130.962
+                c-4.271-4.094-11.021-3.927-15.083,0.333c-4.073,4.26-3.917,11.01,0.333,15.083l245.333,234.667
+                c2.063,1.969,4.719,2.958,7.375,2.958s5.313-0.99,7.375-2.958l245.333-234.667C512.957,142.306,513.113,135.556,509.04,131.296z"
+          />
+        </svg>
+      </a>
       <ul class="footer__social-list">
         <li>
           <a class="footer__link" href="https://medium.com/@dsociety">
-            <svg
-              class="icon icon__social"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg class="icon icon__social" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="m7.996 21.324c0 .695-.521.982-1.098.695l-6.228-3.113c-.188-.089-.346-.238-.475-.447s-.195-.417-.195-.622v-15.227c0-.568.341-.825 1.112-.441l6.844 3.42c.099.099.026-.581.04 15.735zm.857-14.32 7.152 11.568-7.152-3.553zm15.147.241v14.079c0 .223-.062.403-.188.541-.125.138-.295.207-.509.207s-.424-.058-.629-.174l-5.906-2.939zm-.04-1.603c0 .027-1.145 1.895-3.435 5.603s-3.632 5.88-4.025 6.512l-5.223-8.469 4.339-7.039c.236-.388.72-.456 1.045-.294l7.246 3.607c.035.017.053.044.053.08z"
               /></svg
@@ -117,11 +115,7 @@
         </li>
         <li>
           <a class="footer__link" href="https://twitter.com/dsociety3">
-            <svg
-              class="icon icon__social"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg class="icon icon__social" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="m21.534 7.113c.976-.693 1.797-1.558 2.466-2.554v-.001c-.893.391-1.843.651-2.835.777 1.02-.609 1.799-1.566 2.165-2.719-.951.567-2.001.967-3.12 1.191-.903-.962-2.19-1.557-3.594-1.557-2.724 0-4.917 2.211-4.917 4.921 0 .39.033.765.114 1.122-4.09-.2-7.71-2.16-10.142-5.147-.424.737-.674 1.58-.674 2.487 0 1.704.877 3.214 2.186 4.089-.791-.015-1.566-.245-2.223-.606v.054c0 2.391 1.705 4.377 3.942 4.835-.401.11-.837.162-1.29.162-.315 0-.633-.018-.931-.084.637 1.948 2.447 3.381 4.597 3.428-1.674 1.309-3.8 2.098-6.101 2.098-.403 0-.79-.018-1.177-.067 2.18 1.405 4.762 2.208 7.548 2.208 8.683 0 14.342-7.244 13.986-14.637z"
               /></svg
@@ -177,13 +171,34 @@
 
     <div class="join-modal-wrapper hide">
       <div class="join-modal">
-        <h3>Send your request</h3>
-        <form action="#" method="post">
-          <input type="text" placeholder="Telegram username" />
-          <input type="text" placeholder="Cause" />
-          <button type="submit">Send</button>
+        <div class="join-modal__header">
+          <h3 class="join-modal__title">Send your request</h3>
+          <button class="join-modal__close">×</button>
+        </div>
+
+        <form class="join-modal__form" method="post">
+          <input
+            class="join-modal__input join-modal__input_username"
+            type="text"
+            name="username"
+            placeholder="Telegram username"
+            required
+          />
+          <input
+            class="join-modal__input join-modal__input_usertext"
+            type="text"
+            name="usertext"
+            placeholder="Why you need it"
+            required
+          />
+          <button class="join-modal__btn-submit" type="submit">SEND</button>
         </form>
       </div>
+    </div>
+
+    <div class="response-modal hide">
+      <button class="response-modal__close">×</button>
+      <h3 class="response-modal__title"></h3>
     </div>
 
     <script src="./js/index.js"></script>

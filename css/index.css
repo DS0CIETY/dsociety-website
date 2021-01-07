@@ -5,8 +5,7 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459W1hyzbi.woff2)
-    format('woff2');
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459W1hyzbi.woff2) format('woff2');
   unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 
@@ -15,17 +14,14 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2)
-    format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459Wlhyw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC,
+    U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 html {
   --black: #000;
   --white: #ffff;
-  --gray: #333;
   --brand-color: #f35959;
   --black-transparent: #0009;
 
@@ -53,12 +49,15 @@ textarea {
 }
 
 body {
+  min-height: 100vh;
+  min-width: 320px;
   margin: 0;
   padding: 0;
   transition: 0.2s;
 
   --background-color: var(--black);
   --color: var(--white);
+  --gray: #333;
 
   background-color: var(--background-color);
   color: var(--color);
@@ -67,6 +66,7 @@ body {
 body.light {
   --background-color: var(--white);
   --color: var(--black);
+  --gray: #999;
 }
 
 ::selection {
@@ -98,31 +98,42 @@ header {
 }
 
 .icon__logo {
-  width: 4em;
-  height: 4em;
+  width: 3.5em;
+  height: 3.5em;
 }
 
 .header__theme {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  width: 3.5em;
+  height: 2.2em;
+  border: 0.1em solid var(--gray);
+  border-radius: 2em;
+}
+
+#theme-checkbox {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  opacity: 0;
 }
 
 .theme-fakecheckbox {
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  transform: translateY(-50%);
   display: inline-block;
   border-radius: 50%;
-  width: 1.8em;
-  height: 1.8em;
+  width: 1.5em;
+  height: 1.5em;
   background: var(--color);
+  opacity: 0.9;
   transition: 0.2s;
 }
 
-.theme-fakecheckbox:hover {
-  background: var(--brand-color);
-}
-
 #theme-checkbox:checked + .theme-fakecheckbox {
-  /*  */
+  left: 47%;
 }
 
 /* Main ****************************** */
@@ -137,7 +148,8 @@ header {
 .intro__subtitle {
   margin: 0.3em 0;
   font-size: 9.4em;
-  letter-spacing: -0.1rem;
+  letter-spacing: -0.3rem;
+  word-spacing: 0.2em;
 }
 
 .intro__btn-join {
@@ -158,10 +170,14 @@ header {
   color: var(--background-color);
 }
 
-.icon__down-arrow {
+.icon__arrow {
   width: 1.4em;
   height: 1.4em;
   opacity: 0.5;
+}
+
+.icon__arrow:hover {
+  opacity: 1;
 }
 
 .about__title {
@@ -235,4 +251,95 @@ footer {
 .join-modal-wrapper.hide {
   visibility: hidden;
   opacity: 0;
+}
+
+.join-modal {
+  padding: 2rem;
+  border-radius: 1em;
+  border: 0.1em solid var(--gray);
+  background-color: var(--background-color);
+}
+
+.join-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.join-modal__title {
+  font-size: 1.6em;
+}
+
+.join-modal__close {
+  padding: 0.2em;
+  padding-right: 0;
+  font-size: 3em;
+  border: none;
+  background-color: transparent;
+  color: inherit;
+}
+
+.join-modal__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 1.3em;
+}
+
+.join-modal__input {
+  margin: 0.9em 0;
+  padding: 0.2em 0;
+  font-size: 1.2em;
+  border: none;
+  border-bottom: 0.1rem solid var(--gray);
+  background-color: transparent;
+  color: inherit;
+  transition: 0.2s;
+}
+
+.join-modal__input:hover,
+.join-modal__input:focus {
+  border-color: var(--color);
+}
+
+.join-modal__btn-submit {
+  margin-top: 1em;
+  padding: 0.8em 1.4em;
+  border-radius: 0.3em;
+  border: 0.1rem solid var(--gray);
+  background-color: transparent;
+  color: inherit;
+  transition: 0.2s;
+}
+
+.join-modal__btn-submit:hover {
+  background-color: var(--brand-color);
+  border-color: var(--brand-color);
+  color: var(--background-color);
+}
+
+.response-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  border-radius: 1em;
+  border: 0.1em solid var(--gray);
+  background-color: var(--background-color);
+  transition: 0.3s;
+}
+
+.response-modal.hide {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.response-modal__close {
+  padding: 0.2em;
+  padding-right: 0;
+  font-size: 3em;
+  border: none;
+  background-color: transparent;
+  color: inherit;
 }
