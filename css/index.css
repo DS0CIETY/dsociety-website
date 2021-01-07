@@ -51,6 +51,7 @@ textarea {
 body {
   min-height: 100vh;
   min-width: 320px;
+  max-width: 1920px;
   margin: 0;
   padding: 0;
   transition: 0.2s;
@@ -77,9 +78,10 @@ body.light {
 /* Common styles ********************* */
 
 section {
+  max-width: 65rem;
+  margin: 0 auto 5rem;
+  padding: 3rem;
   text-align: center;
-  padding: 3rem 25%;
-  margin-bottom: 5rem;
 }
 
 .icon {
@@ -90,11 +92,34 @@ section {
 /* Header **************************** */
 
 header {
-  padding: 1rem 25%;
+  position: relative;
+  max-width: 65rem;
+  margin: 0 auto;
+  padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 0.1rem solid var(--gray);
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 99vw;
+  height: 1px;
+  background-color: var(--gray);
+}
+
+@media all and (max-width: 990px) {
+  section {
+    max-width: 45rem;
+    padding: 1rem;
+  }
+  header {
+    max-width: 45rem;
+  }
 }
 
 .icon__logo {
@@ -147,9 +172,23 @@ header {
 
 .intro__subtitle {
   margin: 0.3em 0;
-  font-size: 9.4em;
+  font-size: 9.2em;
   letter-spacing: -0.3rem;
   word-spacing: 0.2em;
+}
+
+@media all and (max-width: 990px) {
+  .intro__subtitle {
+    margin: 1em 0;
+    font-size: 6.4em;
+  }
+}
+
+@media all and (max-width: 660px) {
+  .intro__subtitle {
+    margin: 2em 0;
+    font-size: 5em;
+  }
 }
 
 .intro__btn-join {
@@ -189,6 +228,28 @@ header {
   line-height: 1.3em;
 }
 
+@media all and (max-width: 990px) {
+  .about__title {
+    font-size: 3em;
+  }
+
+  .about__description {
+    font-size: 1.6em;
+    line-height: 1.5em;
+  }
+}
+
+@media all and (max-width: 660px) {
+  .about__title {
+    font-size: 2.6em;
+  }
+
+  .about__description {
+    font-size: 1.5em;
+    line-height: 1.5em;
+  }
+}
+
 /* Footer **************************** */
 
 footer {
@@ -200,10 +261,12 @@ footer {
 }
 
 .footer__social-list {
-  margin: 0;
-  padding: 0;
+  margin: 1em 0;
+  padding: 0.2em;
   display: flex;
   list-style: none;
+  border-radius: 3rem;
+  border: 0.1rem solid var(--gray);
 }
 
 .footer__social-list li {
@@ -335,10 +398,14 @@ footer {
   opacity: 0;
 }
 
+.response-modal__title {
+  font-size: 1.8em;
+}
+
 .response-modal__close {
   padding: 0.2em;
   padding-right: 0;
-  font-size: 3em;
+  font-size: 1.2em;
   border: none;
   background-color: transparent;
   color: inherit;

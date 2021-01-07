@@ -37,18 +37,18 @@ form.onsubmit = async (event) => {
   event.preventDefault();
 
   const requestText = `<b>🤖 User name:</b> ${usernameInput.value} | <b>💬 Request:</b> ${usertextInput.value}`;
-  const botRequest = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&parse_mode=html&text=${requestText}`;
+  const botRequest = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&parse_mode=html&text=${requestText}`;
 
   fetch(botRequest, {
     method: 'POST',
   })
-    .then((response) => {
-      responseTitle.textContent = response.text;
+    .then(() => {
+      responseTitle.textContent = 'Thanks! Your message sent.';
       closeJoinModal();
-      responseTitle.classList.remove('hide');
+      responseModal.classList.remove('hide');
     })
-    .catch((error) => {
-      responseTitle.textContent = error.text;
+    .catch(() => {
+      responseTitle.textContent = 'Something happened. Try one more time or contact via social links.';
       closeJoinModal();
       responseModal.classList.remove('hide');
     });
