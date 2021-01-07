@@ -1,14 +1,15 @@
 'use strict';
 
-// Footer date
+// Theme toggle
 
-document.querySelector('.footer__date').textContent = updateDate();
+document.querySelector('#theme-checkbox').addEventListener('click', () => {
+  document.body.classList.toggle('light');
+});
 
-function updateDate() {
-  const date = new Date();
-  const year = date.getFullYear();
-  const month = date.getMonth() + 1; // count starts at 0
-  const day = date.getDate();
+// Join button
 
-  return `${day} : ${month} : ${year}`;
-}
+document.querySelector('.intro__btn-join').addEventListener('click', () => {
+  document.querySelector('.join-modal-wrapper').classList.remove('hide');
+});
+
+document.querySelector('.footer__date').textContent = new Date().getFullYear();
