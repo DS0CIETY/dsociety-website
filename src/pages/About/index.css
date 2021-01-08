@@ -1,0 +1,9 @@
+.about__title {
+  margin: 1em 0;
+  font-size: 4em;
+}
+
+.about__description {
+  max-width: 30em;
+  font-size: 1.8em;
+}

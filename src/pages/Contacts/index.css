@@ -1,0 +1,25 @@
+.contacts__title {
+  margin: 1em 0;
+  font-size: 4em;
+}
+
+.contacts__link-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contacts__link-list li {
+  margin: 2em 0;
+  font-size: 2.2em;
+}
+
+.contacts__icon {
+  position: relative;
+  bottom: -0.14em;
+  margin-right: 0.6em;
+  width: 1em;
+  height: 1em;
+  fill: var(--color);
+  transition: 0.2s;
+}

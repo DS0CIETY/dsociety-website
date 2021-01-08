@@ -1,0 +1,10 @@
+.link {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+
+.link::before {
+  content: '';
+  position: absolute;
+}

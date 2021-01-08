@@ -1,0 +1,85 @@
+.join-modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--black-transparent);
+  transition: 0.2s;
+}
+
+.join-modal {
+  padding: 2rem;
+  border-radius: 1em;
+  border: 0.1em solid var(--gray);
+  background-color: var(--background-color);
+}
+
+.join-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.join-modal__title {
+  font-size: 1.6em;
+}
+
+.join-modal__close {
+  padding: 0.2em;
+  padding-right: 0;
+  font-size: 3em;
+  border: none;
+  background-color: transparent;
+  color: inherit;
+}
+
+.join-modal__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 1.3em;
+}
+
+.join-modal__label {
+  margin-top: 2em;
+}
+
+.join-modal__input {
+  width: 100%;
+  padding: 0.2em 0;
+  font-size: 1.2em;
+  border: none;
+  border-bottom: 0.1rem solid var(--gray);
+  background-color: transparent;
+  color: inherit;
+  transition: 0.2s;
+}
+
+.join-modal__input:hover,
+.join-modal__input:focus {
+  border-color: var(--color);
+}
+
+.join-modal__input.error {
+  border-color: var(--error-color);
+}
+
+.join-modal__submit {
+  margin-top: 1em;
+  padding: 0.8em 1.4em;
+  border-radius: 0.3em;
+  border: 0.1rem solid var(--gray);
+  background-color: transparent;
+  color: inherit;
+  transition: 0.2s;
+}
+
+.join-modal__submit:hover {
+  background-color: var(--brand-color);
+  border-color: var(--brand-color);
+  color: var(--background-color);
+}

@@ -1,0 +1,25 @@
+.home__title {
+  margin: 0.5em 0;
+  font-size: 8.5em;
+  letter-spacing: -0.3rem;
+  word-spacing: 0.2em;
+}
+
+.home__join-button {
+  margin-bottom: 3em;
+  padding: 1em 2em;
+  border-radius: 2em;
+  font-size: 1.7em;
+  letter-spacing: 0.1em;
+  border: 1px solid #333;
+  background-color: transparent;
+  color: inherit;
+  transition: 0.2s;
+}
+
+.home__join-button:hover {
+  transform: translateY(-0.2em);
+  background-color: var(--brand-color);
+  border-color: var(--brand-color);
+  color: var(--background-color);
+}
