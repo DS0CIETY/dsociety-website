@@ -33,25 +33,41 @@ const form = document.querySelector('.join-modal__form');
 const usernameInput = document.querySelector('.join-modal__input_username');
 const usertextInput = document.querySelector('.join-modal__input_usertext');
 
+usernameInput.addEventListener('change', () => {
+  usernameInput.classList.remove('error');
+});
+
+usertextInput.addEventListener('change', () => {
+  usertextInput.classList.remove('error');
+});
+
 form.onsubmit = async (event) => {
   event.preventDefault();
 
-  const requestText = `<b>🤖 User name:</b> ${usernameInput.value} | <b>💬 Request:</b> ${usertextInput.value}`;
-  const botRequest = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&parse_mode=html&text=${requestText}`;
+  const userNameIsOk = usernameInput.value.match(/@[A-Za-z]+/);
+  const userTextIsOk = usertextInput.value.match(/[A-Za-zА-Яа-я]+/);
 
-  fetch(botRequest, {
-    method: 'POST',
-  })
-    .then(() => {
-      responseTitle.textContent = 'Thanks! Your message sent.';
-      closeJoinModal();
-      responseModal.classList.remove('hide');
+  !userNameIsOk && usernameInput.classList.add('error');
+  !userTextIsOk && usertextInput.classList.add('error');
+
+  if (userNameIsOk && userTextIsOk) {
+    const requestText = `<b>🤖 User name:</b> ${usernameInput.value} | <b>💬 Request:</b> ${usertextInput.value}`;
+    const botRequest = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatid}&parse_mode=html&text=${requestText}`;
+
+    fetch(botRequest, {
+      method: 'POST',
     })
-    .catch(() => {
-      responseTitle.textContent = 'Something happened. Try one more time or contact via social links.';
-      closeJoinModal();
-      responseModal.classList.remove('hide');
-    });
+      .then(() => {
+        responseTitle.textContent = 'Thanks! Your message sent.';
+        closeJoinModal();
+        responseModal.classList.remove('hide');
+      })
+      .catch(() => {
+        responseTitle.textContent = 'Something happened. Try one more time or contact via social links.';
+        closeJoinModal();
+        responseModal.classList.remove('hide');
+      });
+  }
 };
 
 document.querySelector('.footer__date').textContent = new Date().getFullYear();

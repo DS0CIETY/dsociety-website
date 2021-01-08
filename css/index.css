@@ -365,6 +365,10 @@ footer {
   border-color: var(--color);
 }
 
+.join-modal__input.error {
+  border-color: red;
+}
+
 .join-modal__btn-submit {
   margin-top: 1em;
   padding: 0.8em 1.4em;
