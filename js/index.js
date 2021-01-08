@@ -51,7 +51,7 @@ form.onsubmit = async (event) => {
   !userTextIsOk && usertextInput.classList.add('error');
 
   if (userNameIsOk && userTextIsOk) {
-    const requestText = `<b>🤖 User name:</b> ${usernameInput.value} | <b>💬 Request:</b> ${usertextInput.value}`;
+    const requestText = `<b>🤖 User:</b> ${usernameInput.value} | <b>💬 Request:</b> ${usertextInput.value}`;
     const botRequest = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatid}&parse_mode=html&text=${requestText}`;
 
     fetch(botRequest, {
@@ -61,6 +61,10 @@ form.onsubmit = async (event) => {
         responseTitle.textContent = 'Thanks! Your message sent.';
         closeJoinModal();
         responseModal.classList.remove('hide');
+        usernameInput.value = '';
+        usertextInput.value = '';
+        usernameInput.classList.remove('error');
+        usertextInput.classList.remove('error');
       })
       .catch(() => {
         responseTitle.textContent = 'Something happened. Try one more time or contact via social links.';
