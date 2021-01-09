@@ -1,8 +1,14 @@
 .App {
+  position: relative;
   min-height: 100vh;
   min-width: 320px;
   max-width: 1920px;
   transition: 0.2s;
+  background: linear-gradient(
+    0deg,
+    var(--brand-color) 0%,
+    var(--background-color) 70%
+  );
 
   --background-color: var(--black);
   --color: var(--white);
