@@ -7,7 +7,8 @@ export const Header = (props) => {
   return (
     <header className="header">
       <a href="." className="header__logo">
-        LOGO
+        <span className="logo"></span>
+        DSOCIETY
       </a>
 
       <ul className="header__link-list">

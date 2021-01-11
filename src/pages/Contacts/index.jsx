@@ -4,27 +4,43 @@ import { Link } from '../../components/Link';
 export const Contacts = () => {
   return (
     <section className="contacts">
-      <h2 className="contacts__title">Contacts</h2>
+      <h2 className="contacts__title">
+        JOIN US <br /> WILL BE COOL
+      </h2>
+      <span className="contacts__mail">
+        <Link href="mailto:ds0c1ety@protonmail.ch">ds0c1ety@protonmail.ch</Link>
+      </span>
       <ul className="contacts__link-list">
         <li>
           <Link href="https://medium.com/@dsociety">
-            <svg className="contacts__icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg
+              className="contacts__icon"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
               <path d="m7.996 21.324c0 .695-.521.982-1.098.695l-6.228-3.113c-.188-.089-.346-.238-.475-.447s-.195-.417-.195-.622v-15.227c0-.568.341-.825 1.112-.441l6.844 3.42c.099.099.026-.581.04 15.735zm.857-14.32 7.152 11.568-7.152-3.553zm15.147.241v14.079c0 .223-.062.403-.188.541-.125.138-.295.207-.509.207s-.424-.058-.629-.174l-5.906-2.939zm-.04-1.603c0 .027-1.145 1.895-3.435 5.603s-3.632 5.88-4.025 6.512l-5.223-8.469 4.339-7.039c.236-.388.72-.456 1.045-.294l7.246 3.607c.035.017.053.044.053.08z" />
             </svg>
-            MEDIUM
           </Link>
         </li>
         <li>
           <Link href="https://twitter.com/dsociety3">
-            <svg className="contacts__icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg
+              className="contacts__icon"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
               <path d="m21.534 7.113c.976-.693 1.797-1.558 2.466-2.554v-.001c-.893.391-1.843.651-2.835.777 1.02-.609 1.799-1.566 2.165-2.719-.951.567-2.001.967-3.12 1.191-.903-.962-2.19-1.557-3.594-1.557-2.724 0-4.917 2.211-4.917 4.921 0 .39.033.765.114 1.122-4.09-.2-7.71-2.16-10.142-5.147-.424.737-.674 1.58-.674 2.487 0 1.704.877 3.214 2.186 4.089-.791-.015-1.566-.245-2.223-.606v.054c0 2.391 1.705 4.377 3.942 4.835-.401.11-.837.162-1.29.162-.315 0-.633-.018-.931-.084.637 1.948 2.447 3.381 4.597 3.428-1.674 1.309-3.8 2.098-6.101 2.098-.403 0-.79-.018-1.177-.067 2.18 1.405 4.762 2.208 7.548 2.208 8.683 0 14.342-7.244 13.986-14.637z" />
             </svg>
-            TWITTER
           </Link>
         </li>
         <li>
           <Link href="https://github.com/DS0CIETY">
-            <svg className="contacts__icon" x="0px" y="0px" viewBox="0 0 475.084 475.084">
+            <svg
+              className="contacts__icon"
+              x="0px"
+              y="0px"
+              viewBox="0 0 475.084 475.084"
+            >
               <path
                 d="M436.244,146.752c5.14-15.422,7.713-31.409,7.713-47.967c0-22.08-4.859-42.828-14.564-62.242
    c-20.362,0-38.349,3.715-53.961,11.136c-15.604,7.423-33.4,18.938-53.379,34.545c-25.122-6.09-51.777-9.135-79.941-9.135
@@ -58,7 +74,6 @@ export const Contacts = () => {
    C359.498,279.226,355.402,271.994,349.601,265.52z"
               />
             </svg>
-            GITHUB
           </Link>
         </li>
       </ul>
