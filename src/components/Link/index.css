@@ -2,9 +2,9 @@
   position: relative;
   text-decoration: none;
   color: inherit;
+  transition: 0.2s;
 }
 
-.link::before {
-  content: '';
-  position: absolute;
+.link:hover {
+  opacity: 0.5;
 }

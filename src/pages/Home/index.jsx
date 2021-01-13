@@ -10,14 +10,19 @@ export const Home = () => {
 
   return (
     <section className="home">
-      <h1 hidden>DSOCIETY</h1> {/* SEO TITLE */}
-      <h2 className="home__title">TOGETHER WE CREATE OUR NEW FUTURE</h2>
-      <button
-        className="home__join-button"
-        onClick={() => setModalVisible(true)}
-      >
-        JOIN
-      </button>
+      <div className="home__logo">
+        <div className="logo"></div>
+      </div>
+      <div className="home__intro">
+        <h1 hidden>DSOCIETY</h1> {/* SEO TITLE */}
+        <h2 className="home__title">TOGETHER WE CREATE OUR NEW FUTURE</h2>
+        <button
+          className="home__join-button"
+          onClick={() => setModalVisible(true)}
+        >
+          JOIN US
+        </button>
+      </div>
       {modalVisible && (
         <JoinModal
           setModalVisible={setModalVisible}

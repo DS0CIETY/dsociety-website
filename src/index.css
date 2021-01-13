@@ -46,10 +46,11 @@
 
 html {
   --black: #000;
+  --dark: #0c0e14;
   --white: #fefefe;
   --black-transparent: #0009;
   --error-color: rgb(255, 0, 0);
-  --brand-color: #568bff; /* not sure */
+  --brand-color: #407cfc; /* not sure */
 
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
@@ -60,6 +61,11 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+::selection {
+  background-color: transparent;
+  color: var(--brand-color);
 }
 
 button,

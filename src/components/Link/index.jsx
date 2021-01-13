@@ -5,7 +5,7 @@ export const Link = (props) => {
 
   return (
     <a href={href} className="link" target="_blank" rel="noreferrer">
-      {children}
+      {children} ↗
     </a>
   );
 };

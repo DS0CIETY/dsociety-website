@@ -5,9 +5,9 @@
   max-width: 1920px;
   transition: 0.2s;
 
-  --background-color: var(--black);
+  --background-color: var(--dark);
   --color: var(--white);
-  --gray: #333;
+  --gray: rgb(61, 61, 61);
 
   background-color: var(--background-color);
   color: var(--color);
@@ -16,5 +16,5 @@
 .App.light {
   --background-color: var(--white);
   --color: var(--black);
-  --gray: #a8a8a8;
+  --gray: #a0a0a0;
 }
