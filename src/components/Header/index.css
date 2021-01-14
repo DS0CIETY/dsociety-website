@@ -39,29 +39,14 @@ header {
 }
 
 .header__link {
-  position: relative;
   padding: 0.2em 0.4em;
   color: inherit;
   text-decoration: none;
   transition: 0.2s;
 }
 
-.header__link::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: -0.1em;
-  transform: translateX(-50%);
-  height: 0.2em;
-  width: 0.2em;
-  border-radius: 50%;
-  opacity: 0;
-  background-color: var(--color);
-  transition: inherit;
-}
-
-.header__link:hover::before {
-  opacity: 1;
+.header__link:hover {
+  opacity: 0.5;
 }
 
 .header__theme {

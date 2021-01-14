@@ -3,7 +3,7 @@ import { HashRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 import { Header } from '../components/Header';
 import { Home } from './Home';
-import { About } from './About';
+import { Blog } from './Blog';
 import { Contacts } from './Contacts';
 
 export const App = () => {
@@ -16,7 +16,7 @@ export const App = () => {
 
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
+          <Route path="/blog" component={Blog} />
           <Route path="/contacts" component={Contacts} />
         </Switch>
       </HashRouter>

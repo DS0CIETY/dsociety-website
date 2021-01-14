@@ -13,17 +13,17 @@ export const Header = (props) => {
 
       <ul className="header__link-list">
         <li>
-          <Link to="/" className="header__link" data-text="HOME">
+          <Link to="/" className="header__link">
             HOME
           </Link>
         </li>
         <li>
-          <Link to="/about" className="header__link" data-text="ABOUT">
-            ABOUT
+          <Link to="/blog" className="header__link">
+            BLOG
           </Link>
         </li>
         <li>
-          <Link to="/contacts" className="header__link" data-text="CONTACTS">
+          <Link to="/contacts" className="header__link">
             CONTACTS
           </Link>
         </li>
