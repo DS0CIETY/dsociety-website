@@ -2,52 +2,57 @@ import './index.css';
 
 export const Home = () => {
   return (
-    <section className="home">
-      <div className="home__intro">
-        <h1 hidden>DSOCIETY</h1> {/* SEO TITLE */}
-        <h2 className="home__intro__title">NEW SOCIETY. NEW FUTURE.</h2>
-        <p className="home__intro__description">
+    <section className="Home">
+      <section className="intro">
+        <h1 hidden>DSOCIETY</h1> {/* SEO */}
+        <h2 className="intro__title">
+          <span>NEW SOCIETY</span> <br /> NEW FUTURE
+        </h2>
+        <p className="intro__description">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit cum possimus quidem amet sit unde
           praesentium, rerum neque tempora architecto.
         </p>
-      </div>
+      </section>
 
-      <div className="home__about">
-        <h2 className="home__about__title">About</h2>
-        <p className="home__about__description">
+      <section className="about">
+        <h2 className="about__title">About</h2>
+        <p className="about__description">
           Just a group of those who want to change or create something. No matter your ability, you can do anything for
-          our world. Everyone has their own way, you just need to find it.
+          our world. Everyone has their own way, you just need to find it. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Earum inventore vel deleniti omnis porro adipisci eos numquam!
         </p>
-      </div>
+        <p className="about__description">
+          Explicabo mollitia eveniet rerum eius, nisi corrupti esse consequuntur consequatur repellendus reiciendis
+          voluptatem exercitationem voluptatibus illum maiores adipisci!
+        </p>
+      </section>
 
-      <div className="home__important">
-        <h2 className="home__important__title">For us important</h2>
+      <section className="important">
+        <h2 className="important__title">For us important</h2>
 
-        <div className="home__important__block">
-          <h3 className="home__important__subtitle">Equality</h3>
-          <p className="home__important__description">
+        <div className="important__block">
+          <h3 className="important__block-subtitle">Equality</h3>
+          <p className="important__block-description">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus, quisquam blanditiis veniam libero
             laboriosam quos cumque officiis ad adipisci non beatae ipsum error eius voluptatem exercitationem temporibus
             nam nobis praesentium.
           </p>
         </div>
-
-        <div className="home__important__block">
-          <h3 className="home__important__subtitle">Self-development</h3>
-          <p className="home__important__description">
+        <div className="important__block">
+          <h3 className="important__block-subtitle">Self-development</h3>
+          <p className="important__block-description">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus, quisquam blanditiis veniam libero
             laboriosa adipisci non beatae ipsum error eius voluptatem exercitationem temporibus nam nobis praesentium.
           </p>
         </div>
-
-        <div className="home__important__block">
-          <h3 className="home__important__subtitle">Trust</h3>
-          <p className="home__important__description">
+        <div className="important__block">
+          <h3 className="important__block-subtitle">Trust</h3>
+          <p className="important__block-description">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus, quisquam blanditiis veniam libero
             laboriosam quos cumque officiis ad adipisci non beatae ipsum.
           </p>
         </div>
-      </div>
+      </section>
     </section>
   );
 };

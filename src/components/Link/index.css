@@ -6,5 +6,15 @@
 }
 
 .link:hover {
-  opacity: 0.5;
+  color: var(--brand-color);
+}
+
+.link__arrow {
+  display: inline-block;
+  font-size: 0.9em;
+  transition: inherit;
+}
+
+.link:hover .link__arrow {
+  transform: translate(0.1em, -0.1em);
 }

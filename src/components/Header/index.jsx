@@ -19,11 +19,11 @@ export const Header = (props) => {
             HOME
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link to="/blog" className="header__link">
             BLOG
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link to="/contacts" className="header__link">
             CONTACTS
@@ -32,7 +32,7 @@ export const Header = (props) => {
       </ul>
 
       <div className="header__theme">
-        <input onClick={toggleTheme} type="checkbox" id="theme-checkbox" checked={isDark} />
+        <input onClick={toggleTheme} type="checkbox" id="theme-checkbox" defaultChecked={isDark} />
         <label htmlFor="theme-checkbox" className="theme-fakecheckbox"></label>
       </div>
     </header>

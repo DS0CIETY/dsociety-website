@@ -1,20 +1,84 @@
-.contacts__title {
-  font-size: 4.4em;
-  line-height: 1.3em;
+.Contacts {
+  text-align: center;
 }
 
-.contact__description {
-  max-width: 26em;
-  font-size: 2.1em;
+.Contacts__title {
+  margin-top: 1.4em;
+  font-size: 3.4em;
 }
 
-.contacts__link-list {
-  margin: 4em 0 0;
-  padding: 0;
+.Contacts__description {
+  max-width: 28em;
+  margin: 0 auto;
+  font-size: 1.6em;
+  line-height: 1.4em;
+  letter-spacing: 0.1em;
+}
+
+.Contacts__form-wrapper {
+  margin-top: 14vh;
+}
+
+.Contacts__form-title {
+  font-size: 2em;
+}
+
+.Contacts__form {
+  position: relative;
+  z-index: 1;
+  padding: 3rem;
+  margin: 3em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid var(--transparent);
+  background-color: var(--background-color);
+}
+
+.Contacts__form-input,
+.Contacts__form-textarea,
+.Contacts__form-btn-submit {
+  max-width: 40em;
+  width: 100%;
+  padding: 1rem;
+  margin: auto;
+  border-radius: 0.6em;
+  border: 1px solid var(--brand-color);
+  background-color: var(--background-color);
+  color: inherit;
+  transition: 0.2s;
+}
+
+.Contacts__form-textarea {
+  min-height: 12em;
+  margin-top: 1.6em;
+  resize: vertical;
+}
+
+.Contacts__form-input:focus,
+.Contacts__form-textarea:focus {
+  background-color: var(--transparent);
+}
+
+.Contacts__form-btn-submit {
+  margin-top: 3em;
+}
+
+.Contacts__form-btn-submit:hover,
+.Contacts__form-btn-submit:focus {
+  background-color: var(--brand-color);
+  color: var(--background-color);
+}
+
+.Contacts__link-list {
+  padding: 1em;
+  margin-bottom: 5vh;
+  display: flex;
+  justify-content: center;
   list-style: none;
-  font-size: 1.9em;
+  font-size: 1.4em;
 }
 
-.contacts__link-list li {
-  margin-top: 1em;
+.Contacts__link-list li {
+  margin: 0 0.9em;
 }

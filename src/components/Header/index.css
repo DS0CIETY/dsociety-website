@@ -8,7 +8,7 @@ header {
   display: flex;
   align-items: center;
   font-size: 1.3em;
-  background-color: var(--background-header);
+  background-color: var(--background-color);
 }
 
 header::after {
@@ -57,7 +57,7 @@ header::after {
 }
 
 .header__link:hover {
-  opacity: 0.5;
+  color: var(--brand-color);
 }
 
 .header__theme {

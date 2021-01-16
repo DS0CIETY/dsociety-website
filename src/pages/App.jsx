@@ -3,8 +3,12 @@ import { HashRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 import { Header } from '../components/Header';
 import { Home } from './Home';
-import { Blog } from './Blog';
+// import { Blog } from './Blog';
 import { Contacts } from './Contacts';
+
+// ░█▀▀▄ ░█▀▀▀█ ░█▀▀▀█ ░█▀▀█ ▀█▀ ░█▀▀▀ ▀▀█▀▀ ░█──░█
+// ░█─░█ ─▀▀▀▄▄ ░█──░█ ░█─── ░█─ ░█▀▀▀ ─░█── ░█▄▄▄█
+// ░█▄▄▀ ░█▄▄▄█ ░█▄▄▄█ ░█▄▄█ ▄█▄ ░█▄▄▄ ─░█── ──░█──
 
 export const App = () => {
   const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
@@ -22,16 +26,16 @@ export const App = () => {
 
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/blog" component={Blog} />
+          {/* <Route path="/blog" component={Blog} /> */}
           <Route path="/contacts" component={Contacts} />
         </Switch>
       </HashRouter>
 
       {/* Background animation */}
-      <div class="App__lines">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
+      <div className="App__lines">
+        <div className="line"></div>
+        <div className="line"></div>
+        <div className="line"></div>
       </div>
     </div>
   );
