@@ -3,18 +3,81 @@
   min-height: 100vh;
   min-width: 320px;
   max-width: 1920px;
+  padding-top: 4rem;
   transition: 0.2s;
 
   --background-color: var(--dark);
-  --color: var(--white);
+  --color: var(--light);
+  --background-header: var(--black);
   --gray: rgb(61, 61, 61);
+  --transparent: var(--white-transparent);
 
   background-color: var(--background-color);
   color: var(--color);
 }
 
 .App.light {
-  --background-color: var(--white);
+  --background-color: var(--light);
   --color: var(--black);
+  --background-header: var(--white);
   --gray: #a0a0a0;
+  --transparent: var(--black-transparent);
+}
+
+.App__lines {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.App__lines .line {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  background: var(--transparent);
+  overflow: hidden;
+}
+
+.App__lines .line::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 13vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(to bottom, var(--background-color) 0%, var(--brand-color) 75%, var(--brand-color) 100%);
+  opacity: 0.3;
+  animation: drop 7s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+
+.App__lines .line:nth-child(1) {
+  margin-left: -30%;
+}
+
+.App__lines .line:nth-child(1)::after {
+  animation-delay: 2s;
+}
+
+.App__lines .line:nth-child(3) {
+  margin-left: 30%;
+}
+.App__lines .line:nth-child(3)::after {
+  animation-delay: 2.5s;
+}
+
+@keyframes drop {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 110%;
+  }
 }

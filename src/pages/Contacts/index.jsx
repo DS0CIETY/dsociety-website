@@ -9,11 +9,10 @@ export const Contacts = () => {
 
   return (
     <section className="contacts">
-      <h2 className="contacts__title">JOIN US</h2>
+      <h2 className="contacts__title">JOIN OUR COMMUNITY</h2>
       <p className="contact__description">
-        Want to change something, create useful project? Maybe just willing to
-        work with us our own project? No matter the reason, we are always happy
-        to help. Let's get in touch!
+        Want to change something, create useful project? Maybe just willing to work with us our own project? No matter
+        the reason, we are always happy to help. Let's get in touch!
       </p>
 
       <div className="join-modal-wrapper">
@@ -41,11 +40,7 @@ export const Contacts = () => {
                 required
               />
             </label>
-            <button
-              className="join-modal__submit"
-              type="submit"
-              onClick={(event) => sendForm(event)}
-            >
+            <button className="join-modal__submit" type="submit" onClick={(event) => sendForm(event)}>
               SEND
             </button>
           </form>

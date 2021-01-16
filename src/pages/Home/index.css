@@ -3,8 +3,24 @@
   padding-top: 8rem;
 }
 
-.home__title {
-  font-size: 5em;
-  letter-spacing: 0rem;
+.home__intro {
+  text-align: center;
+  margin-top: 15vh;
+  margin-bottom: 30vh;
+}
+
+.home__intro__title {
+  font-size: 4em;
+  letter-spacing: 0.2rem;
   word-spacing: 0.2em;
+  background: -webkit-linear-gradient(var(--brand-color), var(--color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home__intro__description {
+  max-width: 35em;
+  margin: 0 auto;
+  font-size: 1.6em;
+  line-height: 1.4em;
 }

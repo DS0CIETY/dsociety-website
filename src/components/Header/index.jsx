@@ -1,13 +1,15 @@
 import { Link } from 'react-router-dom';
 import './index.css';
+import Logo from '../../assets/svg/logo.svg';
+import LogoDark from '../../assets/svg/logo_dark.svg';
 
 export const Header = (props) => {
-  const { toggleTheme } = props;
+  const { isDark, toggleTheme } = props;
 
   return (
     <header className="header">
-      <a href="." className="header__logo">
-        <span className="logo"></span>
+      <a href="." className="header__logo-wrapper">
+        <img src={isDark ? LogoDark : Logo} alt="logo" />
         DSOCIETY
       </a>
 
@@ -30,7 +32,7 @@ export const Header = (props) => {
       </ul>
 
       <div className="header__theme">
-        <input onClick={toggleTheme} type="checkbox" id="theme-checkbox" />
+        <input onClick={toggleTheme} type="checkbox" id="theme-checkbox" checked={isDark} />
         <label htmlFor="theme-checkbox" className="theme-fakecheckbox"></label>
       </div>
     </header>

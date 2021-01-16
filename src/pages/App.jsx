@@ -7,12 +7,18 @@ import { Blog } from './Blog';
 import { Contacts } from './Contacts';
 
 export const App = () => {
-  const [isDark, setIsDark] = useState(true);
+  const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+  const localStorageTheme = window.localStorage.getItem('theme');
+  // check local storage theme
+  // if have then set this theme
+  // else set browser theme
+  const darkThemeIsActive = localStorageTheme ? localStorageTheme === 'dark' : prefersDarkScheme.matches;
+  const [isDark, setIsDark] = useState(darkThemeIsActive);
 
   return (
     <div className={`App ${isDark ? '' : 'light'}`}>
       <HashRouter>
-        <Header toggleTheme={toggleTheme} />
+        <Header isDark={isDark} toggleTheme={toggleTheme} />
 
         <Switch>
           <Route exact path="/" component={Home} />
@@ -20,10 +26,20 @@ export const App = () => {
           <Route path="/contacts" component={Contacts} />
         </Switch>
       </HashRouter>
+
+      {/* Background animation */}
+      <div class="App__lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
     </div>
   );
 
   function toggleTheme() {
+    const theme = isDark ? 'light' : 'dark';
+
     setIsDark(!isDark);
+    localStorage.setItem('theme', theme);
   }
 };
