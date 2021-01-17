@@ -51,7 +51,7 @@
   left: 0;
   background: linear-gradient(to bottom, var(--background-color) 0%, var(--brand-color) 75%, var(--brand-color) 100%);
   opacity: 0.3;
-  animation: drop 7s 0s infinite;
+  animation: drop 10s 0s infinite;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
 }
@@ -59,16 +59,29 @@
 .App__lines .line:nth-child(1) {
   margin-left: -30%;
 }
-
 .App__lines .line:nth-child(1)::after {
-  animation-delay: 2s;
+  animation-delay: 1.5s;
 }
 
-.App__lines .line:nth-child(3) {
+.App__lines .line:nth-child(2) {
+  margin-left: -15%;
+}
+.App__lines .line:nth-child(2)::after {
+  animation-delay: 3.5s;
+}
+
+.App__lines .line:nth-child(4) {
+  margin-left: 15%;
+}
+.App__lines .line:nth-child(4)::after {
+  animation-delay: 2.5s;
+}
+
+.App__lines .line:nth-child(5) {
   margin-left: 30%;
 }
-.App__lines .line:nth-child(3)::after {
-  animation-delay: 2.5s;
+.App__lines .line:nth-child(5)::after {
+  animation-delay: 4.5s;
 }
 
 @keyframes drop {

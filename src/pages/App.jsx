@@ -14,8 +14,8 @@ export const App = () => {
   const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
   const localStorageTheme = window.localStorage.getItem('theme');
   // check local storage theme
-  // if have then set this theme
-  // else set browser theme
+  // if have then will set storage theme
+  // else will set user's browser theme
   const darkThemeIsActive = localStorageTheme ? localStorageTheme === 'dark' : prefersDarkScheme.matches;
   const [isDark, setIsDark] = useState(darkThemeIsActive);
 
@@ -33,6 +33,8 @@ export const App = () => {
 
       {/* Background animation */}
       <div className="App__lines">
+        <div className="line"></div>
+        <div className="line"></div>
         <div className="line"></div>
         <div className="line"></div>
         <div className="line"></div>

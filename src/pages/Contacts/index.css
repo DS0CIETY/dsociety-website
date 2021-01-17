@@ -49,9 +49,16 @@
   transition: 0.2s;
 }
 
+.Contacts__form-input {
+  margin-bottom: 1.6em;
+}
+
+.Contacts__form-input.unimportant {
+  border-color: var(--transparent);
+}
+
 .Contacts__form-textarea {
   min-height: 12em;
-  margin-top: 1.6em;
   resize: vertical;
 }
 
@@ -61,7 +68,7 @@
 }
 
 .Contacts__form-btn-submit {
-  margin-top: 3em;
+  margin-top: 3.2em;
 }
 
 .Contacts__form-btn-submit:hover,
@@ -74,11 +81,12 @@
   padding: 1em;
   margin-bottom: 5vh;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   list-style: none;
   font-size: 1.4em;
 }
 
 .Contacts__link-list li {
-  margin: 0 0.9em;
+  margin: 0.7em;
 }

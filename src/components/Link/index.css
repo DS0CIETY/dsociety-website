@@ -1,5 +1,6 @@
 .link {
   position: relative;
+  white-space: nowrap;
   text-decoration: none;
   color: inherit;
   transition: 0.2s;
@@ -12,7 +13,7 @@
 .link__arrow {
   display: inline-block;
   font-size: 0.9em;
-  transition: inherit;
+  transition: transform 0.2s;
 }
 
 .link:hover .link__arrow {

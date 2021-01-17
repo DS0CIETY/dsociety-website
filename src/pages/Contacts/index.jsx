@@ -2,10 +2,15 @@ import { useState } from 'react';
 import botData from '../../private/bot.json';
 import './index.css';
 import { Link } from '../../components/Link';
+import { Modal } from '../../components/Modal';
 
 export const Contacts = () => {
-  const [username, setUsername] = useState(false);
+  const [userName, setUserName] = useState(false);
+  const [userPhone, setUserPhone] = useState(false);
+  const [userEmail, setUserEmail] = useState(false);
   const [userMessage, setUserMessage] = useState(false);
+  const [modalTitle, setModalTitle] = useState('');
+  const [modalIsVisible, setModalIsVisible] = useState(false);
 
   return (
     <section className="Contacts">
@@ -22,10 +27,21 @@ export const Contacts = () => {
 
         <form className="Contacts__form" method="post">
           <input
-            className="Contacts__form-input"
-            onChange={(event) => setUsername(event.target.value)}
+            className="Contacts__form-input unimportant"
+            onChange={(event) => setUserPhone(event.target.value)}
             type="text"
-            name="username"
+            placeholder="Phone"
+          />
+          <input
+            className="Contacts__form-input unimportant"
+            onChange={(event) => setUserEmail(event.target.value)}
+            type="text"
+            placeholder="Email"
+          />
+          <input
+            className="Contacts__form-input"
+            onChange={(event) => setUserName(event.target.value)}
+            type="text"
             placeholder="Telegram username *"
             required
           />
@@ -33,7 +49,6 @@ export const Contacts = () => {
             className="Contacts__form-textarea"
             onChange={(event) => setUserMessage(event.target.value)}
             type="text"
-            name="usertext"
             placeholder="Message *"
             required
           />
@@ -57,6 +72,8 @@ export const Contacts = () => {
           <Link href="mailto:ds0c1ety@protonmail.ch">Email</Link>
         </li>
       </ul>
+
+      <Modal isVisible={modalIsVisible} onClose={closeModal} title={modalTitle} />
     </section>
   );
 
@@ -66,22 +83,33 @@ export const Contacts = () => {
     const savedUsername = window.localStorage.getItem('username');
 
     if (savedUsername) {
-      //
-    } else if (username && userMessage && username[0] === '@' && username.length > 1) {
-      const requestText = `<b>🤖 User:</b> ${username} ➜ <b>💬 Message:</b> ${userMessage}`;
+      setModalTitle('You sended request already');
+      setModalIsVisible(true);
+    } else if (userName && userMessage && userName[0] === '@' && userName.length > 1) {
+      const requestText = `<b>🤖 User:</b> ${userName} phone: ${userPhone && userPhone} email: ${
+        userEmail && userEmail
+      } ➜ <b>💬 Message:</b> ${userMessage}`;
       const botRequest = `https://api.telegram.org/bot${botData.token}/sendMessage?chat_id=${botData.chatId}&parse_mode=html&text=${requestText}`;
 
       fetch(botRequest, {
         method: 'POST',
       })
         .then(() => {
-          window.localStorage.setItem('username', username);
+          setModalTitle('Request successfully sended');
+          setModalIsVisible(true);
+          window.localStorage.setItem('username', userName);
         })
         .catch(() => {
-          //
+          setModalTitle('Something wrong. Try again');
+          setModalIsVisible(true);
         });
     } else {
-      //
+      setModalTitle('Wrong data');
+      setModalIsVisible(true);
     }
+  }
+
+  function closeModal() {
+    setModalIsVisible(false);
   }
 };
