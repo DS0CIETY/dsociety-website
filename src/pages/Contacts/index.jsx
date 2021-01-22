@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { FormattedMessage } from 'react-intl';
 import botData from '../../private/bot.json';
 import './index.css';
 import { Link } from '../../components/Link';
@@ -14,15 +15,23 @@ export const Contacts = () => {
 
   return (
     <section className="Contacts">
-      <h2 className="Contacts__title">OUR COMMUNITY</h2>
+      <h2 className="Contacts__title">
+        <FormattedMessage id="contactsMainTitle" defaultMessage="OUR COMMUNITY" />
+      </h2>
       <p className="Contacts__description">
-        Want to change something, create useful project? Maybe just willing to work with us our own project? No matter
-        the reason, we are always happy to help. Let's get in touch!
+        <FormattedMessage
+          id="contactsMainDescription"
+          defaultMessage={`Do you want to change something, create a useful project? Work on interesting ideas? Whatever the reason, we're happy to help. With us!`}
+        />
       </p>
 
       <div className="Contacts__form-wrapper">
         <h3 className="Contacts__form-title">
-          Don't want to be an observer? <br /> Join us!
+          <FormattedMessage
+            id="contactsFormTitle"
+            defaultMessage="Don't want to be an observer? {br} Join us!"
+            value={{ br: <br /> }}
+          />
         </h3>
 
         <form className="Contacts__form" method="post">
@@ -53,7 +62,7 @@ export const Contacts = () => {
             required
           />
           <button className="Contacts__form-btn-submit" type="submit" onClick={(event) => sendForm(event)}>
-            SEND
+            <FormattedMessage id="contactsFormSendButton" defaultMessage="SEND" />
           </button>
         </form>
       </div>

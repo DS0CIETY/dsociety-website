@@ -69,6 +69,9 @@
 
 .Contacts__form-btn-submit {
   margin-top: 3.2em;
+  font-weight: 500;
+  color: var(--brand-color);
+  letter-spacing: 0.4em;
 }
 
 .Contacts__form-btn-submit:hover,
