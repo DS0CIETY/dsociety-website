@@ -19,10 +19,6 @@
   margin-top: 14vh;
 }
 
-.Contacts__form-title {
-  font-size: 2em;
-}
-
 .Contacts__form {
   position: relative;
   z-index: 1;
@@ -78,18 +74,4 @@
 .Contacts__form-btn-submit:focus {
   background-color: var(--brand-color);
   color: var(--background-color);
-}
-
-.Contacts__link-list {
-  padding: 1em;
-  margin-bottom: 5vh;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  list-style: none;
-  font-size: 1.4em;
-}
-
-.Contacts__link-list li {
-  margin: 0.7em;
 }

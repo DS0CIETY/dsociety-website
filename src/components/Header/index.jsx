@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { FormattedMessage } from 'react-intl';
 import './index.css';
 import Logo from '../../assets/svg/logo.svg';
 import LogoDark from '../../assets/svg/logo_dark.svg';
@@ -17,17 +16,17 @@ export const Header = (props) => {
       <ul className="header__link-list">
         <li>
           <Link to="/" className="header__link">
-            <FormattedMessage id="headerHomeLink" defaultMessage="HOME" />
+            ГЛАВНАЯ
           </Link>
         </li>
-        <li>
+        {/* <li>
           <a href="https://blog.dsoc1ety.org" className="header__link">
-            <FormattedMessage id="headerBlogLink" defaultMessage="BLOG" />
+            БЛОГ
           </a>
-        </li>
+        </li> */}
         <li>
           <Link to="/contacts" className="header__link">
-            <FormattedMessage id="headerContactsLink" defaultMessage="CONTACTS" />
+            КОНТАКТЫ
           </Link>
         </li>
       </ul>

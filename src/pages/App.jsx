@@ -2,12 +2,9 @@ import { useState } from 'react';
 import { HashRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 import { Header } from '../components/Header';
+import { Footer } from '../components/Footer';
 import { Home } from './Home';
 import { Contacts } from './Contacts';
-
-// ░█▀▀▄ ░█▀▀▀█ ░█▀▀▀█ ░█▀▀█ ▀█▀ ░█▀▀▀ ▀▀█▀▀ ░█──░█
-// ░█─░█ ─▀▀▀▄▄ ░█──░█ ░█─── ░█─ ░█▀▀▀ ─░█── ░█▄▄▄█
-// ░█▄▄▀ ░█▄▄▄█ ░█▄▄▄█ ░█▄▄█ ▄█▄ ░█▄▄▄ ─░█── ──░█──
 
 export const App = () => {
   const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
@@ -20,6 +17,8 @@ export const App = () => {
 
   return (
     <div className={`App ${isDark ? '' : 'light'}`}>
+      <div className="App__bg-overlay"></div>
+
       <HashRouter>
         <Header isDark={isDark} toggleTheme={toggleTheme} />
 
@@ -27,16 +26,9 @@ export const App = () => {
           <Route exact path="/" component={Home} />
           <Route path="/contacts" component={Contacts} />
         </Switch>
-      </HashRouter>
 
-      {/* Background animation */}
-      <div className="App__lines">
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
-        <div className="line"></div>
-      </div>
+        <Footer />
+      </HashRouter>
     </div>
   );
 

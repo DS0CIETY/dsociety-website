@@ -1,8 +1,6 @@
 import { useState } from 'react';
-import { FormattedMessage } from 'react-intl';
 import botData from '../../private/bot.json';
 import './index.css';
-import { Link } from '../../components/Link';
 import { Modal } from '../../components/Modal';
 
 export const Contacts = () => {
@@ -15,31 +13,20 @@ export const Contacts = () => {
 
   return (
     <section className="Contacts">
-      <h2 className="Contacts__title">
-        <FormattedMessage id="contactsMainTitle" defaultMessage="OUR COMMUNITY" />
-      </h2>
+      <h2 className="Contacts__title">НАШЕ СООБЩЕСТВО</h2>
       <p className="Contacts__description">
-        <FormattedMessage
-          id="contactsMainDescription"
-          defaultMessage={`Do you want to change something, create a useful project? Work on interesting ideas? Whatever the reason, we're happy to help. With us!`}
-        />
+        Хотите что-то изменить? Есть нтересные идеи или хотите обсудить нашу жизнь и окружение? Не хотите быть
+        наблюдателем? Тогда можете приосоединиться к нам. Вместе мы сможем что-то изменить. Оставьте контакты в форме
+        ниже.
       </p>
 
       <div className="Contacts__form-wrapper">
-        <h3 className="Contacts__form-title">
-          <FormattedMessage
-            id="contactsFormTitle"
-            defaultMessage="Don't want to be an observer? {br} Join us!"
-            value={{ br: <br /> }}
-          />
-        </h3>
-
         <form className="Contacts__form" method="post">
           <input
             className="Contacts__form-input unimportant"
             onChange={(event) => setUserPhone(event.target.value)}
             type="text"
-            placeholder="Phone"
+            placeholder="Телефон"
           />
           <input
             className="Contacts__form-input unimportant"
@@ -58,29 +45,14 @@ export const Contacts = () => {
             className="Contacts__form-textarea"
             onChange={(event) => setUserMessage(event.target.value)}
             type="text"
-            placeholder="Message *"
+            placeholder="Сообщение *"
             required
           />
           <button className="Contacts__form-btn-submit" type="submit" onClick={(event) => sendForm(event)}>
-            <FormattedMessage id="contactsFormSendButton" defaultMessage="SEND" />
+            ОТПРАВИТЬ
           </button>
         </form>
       </div>
-
-      <ul className="Contacts__link-list">
-        <li>
-          <Link href="https://medium.com/@dsociety">Medium</Link>
-        </li>
-        <li>
-          <Link href="https://twitter.com/dsociety3">Twitter</Link>
-        </li>
-        <li>
-          <Link href="https://github.com/DS0CIETY">Github</Link>
-        </li>
-        <li>
-          <Link href="mailto:ds0c1ety@protonmail.ch">Email</Link>
-        </li>
-      </ul>
 
       <Modal isVisible={modalIsVisible} onClose={closeModal} title={modalTitle} />
     </section>

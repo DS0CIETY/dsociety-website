@@ -3,7 +3,6 @@
   min-height: 100vh;
   min-width: 320px;
   max-width: 1920px;
-  padding-top: 4rem;
   transition: 0.2s;
 
   --background-color: var(--dark);
@@ -12,6 +11,7 @@
   --transparent: var(--white-transparent);
 
   background-color: var(--background-color);
+  background: url('../assets/images/bg-dark.png');
   color: var(--color);
 }
 
@@ -20,75 +20,23 @@
   --color: var(--black);
   --gray: #a0a0a0;
   --transparent: var(--black-transparent);
+
+  background: url('../assets/images/bg-light.png');
 }
 
-.App__lines {
+.App__bg-overlay {
   pointer-events: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.App__lines .line {
-  position: absolute;
-  width: 1px;
-  height: 100%;
-  top: 0;
-  left: 50%;
-  background: var(--transparent);
-  overflow: hidden;
-}
-
-.App__lines .line::after {
-  content: '';
-  display: block;
-  position: absolute;
-  height: 13vh;
+  position: fixed;
   width: 100%;
-  top: -50%;
-  left: 0;
-  background: linear-gradient(to bottom, var(--background-color) 0%, var(--brand-color) 75%, var(--brand-color) 100%);
-  opacity: 0.3;
-  animation: drop 10s 0s infinite;
-  animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+  height: 100%;
 }
 
-.App__lines .line:nth-child(1) {
-  margin-left: -30%;
-}
-.App__lines .line:nth-child(1)::after {
-  animation-delay: 1.5s;
-}
-
-.App__lines .line:nth-child(2) {
-  margin-left: -15%;
-}
-.App__lines .line:nth-child(2)::after {
-  animation-delay: 3.5s;
+.App .App__bg-overlay {
+  pointer-events: none;
+  background-color: var(--background-color);
+  opacity: 0.8;
 }
 
-.App__lines .line:nth-child(4) {
-  margin-left: 15%;
-}
-.App__lines .line:nth-child(4)::after {
-  animation-delay: 2.5s;
-}
-
-.App__lines .line:nth-child(5) {
-  margin-left: 30%;
-}
-.App__lines .line:nth-child(5)::after {
-  animation-delay: 4.5s;
-}
-
-@keyframes drop {
-  0% {
-    top: -50%;
-  }
-  100% {
-    top: 110%;
-  }
+.App.light .App__bg-overlay {
+  display: none;
 }
