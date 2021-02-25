@@ -19,16 +19,18 @@ export const App = () => {
     <div className={`App ${isDark ? '' : 'light'}`}>
       <div className="App__bg-overlay"></div>
 
-      <HashRouter>
-        <Header isDark={isDark} toggleTheme={toggleTheme} />
+      <div className="App__body-wrapper">
+        <HashRouter>
+          <Header isDark={isDark} toggleTheme={toggleTheme} />
 
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/contacts" component={Contacts} />
-        </Switch>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/contacts" component={Contacts} />
+          </Switch>
 
-        <Footer />
-      </HashRouter>
+          <Footer />
+        </HashRouter>
+      </div>
     </div>
   );
 

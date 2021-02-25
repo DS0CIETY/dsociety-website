@@ -40,3 +40,8 @@
 .App.light .App__bg-overlay {
   display: none;
 }
+
+.App__body-wrapper {
+  position: relative;
+  z-index: 1;
+}
