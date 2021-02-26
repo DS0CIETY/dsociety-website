@@ -14,15 +14,6 @@ export const Home = () => {
         </p>
       </section>
 
-      <section className="about">
-        <h2 className="about__title">О нас</h2>
-        <p className="about__description">
-          Группа тех, кто хочет что-то изменить или создать. Независимо от ваших способностей, вы можете сделать
-          что-нибудь полезное. У каждого есть опыт, знания и навыки в какой-либо области, которые могут улучшить жизнь
-          других людей.
-        </p>
-      </section>
-
       <section className="important">
         <h2 className="important__title">Что важно для лучшего общества</h2>
 
@@ -52,6 +43,15 @@ export const Home = () => {
             люди делают, то же самое.
           </p>
         </div>
+      </section>
+
+      <section className="about">
+        <h2 className="about__title">О нас</h2>
+        <p className="about__description">
+          Группа тех, кто хочет что-то изменить или создать. Независимо от ваших способностей, вы можете сделать
+          что-нибудь полезное. У каждого есть опыт, знания и навыки в какой-либо области, которые могут улучшить жизнь
+          других людей.
+        </p>
       </section>
     </section>
   );

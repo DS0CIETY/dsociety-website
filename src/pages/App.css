@@ -9,6 +9,7 @@
   --color: var(--light);
   --gray: rgb(61, 61, 61);
   --transparent: var(--white-transparent);
+  --brand-color: #356bff;
 
   background-color: var(--background-color);
   color: var(--color);
@@ -19,6 +20,7 @@
   --color: var(--black);
   --gray: #a0a0a0;
   --transparent: var(--black-transparent);
+  --brand-color: #ff4242;
 }
 
 .App__bg-overlay {
@@ -26,8 +28,8 @@
   position: fixed;
   width: 100%;
   height: 100%;
-  background: url('../assets/images/bg-dark.png');
-  transition: 0.3s;
+  background: radial-gradient(var(--brand-color), transparent), url('../assets/images/bg-dark.png');
+  transition: 0.2s;
 }
 
 .App__bg-overlay::after {
@@ -40,16 +42,16 @@
   height: 100%;
   width: 100%;
   background-color: var(--background-color);
-  opacity: 0.8;
+  opacity: 0.85;
   transition: inherit;
 }
 
 .App.light .App__bg-overlay {
-  background: url('../assets/images/bg-light.png');
+  background: radial-gradient(var(--brand-color) 10%, transparent), url('../assets/images/bg-light.png');
 }
 
 .App.light .App__bg-overlay::after {
-  display: none;
+  opacity: 0.9;
 }
 
 .App__body-wrapper {
