@@ -8,7 +8,7 @@ header {
   display: flex;
   align-items: center;
   font-size: 1.3em;
-  /* background-color: var(--background-color); */
+  background-color: var(--background-color);
 }
 
 header::after {
@@ -67,6 +67,7 @@ header::after {
   margin-left: 1em;
   border: 1px solid var(--color);
   border-radius: 2em;
+  transition: 0.2s;
 }
 
 #theme-checkbox {
@@ -88,7 +89,15 @@ header::after {
   height: 0.6em;
   background: var(--color);
   opacity: 0.9;
-  transition: 0.2s;
+  transition: inherit;
+}
+
+.header__theme:hover {
+  border-color: var(--brand-color);
+}
+
+.header__theme:hover .theme-fakecheckbox {
+  background: var(--brand-color);
 }
 
 #theme-checkbox:checked + .theme-fakecheckbox {

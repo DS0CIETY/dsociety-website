@@ -11,7 +11,6 @@
   --transparent: var(--white-transparent);
 
   background-color: var(--background-color);
-  background: url('../assets/images/bg-dark.png');
   color: var(--color);
 }
 
@@ -20,8 +19,6 @@
   --color: var(--black);
   --gray: #a0a0a0;
   --transparent: var(--black-transparent);
-
-  background: url('../assets/images/bg-light.png');
 }
 
 .App__bg-overlay {
@@ -29,15 +26,29 @@
   position: fixed;
   width: 100%;
   height: 100%;
+  background: url('../assets/images/bg-dark.png');
+  transition: 0.3s;
 }
 
-.App .App__bg-overlay {
-  pointer-events: none;
+.App__bg-overlay::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
   background-color: var(--background-color);
   opacity: 0.8;
+  transition: inherit;
 }
 
 .App.light .App__bg-overlay {
+  background: url('../assets/images/bg-light.png');
+}
+
+.App.light .App__bg-overlay::after {
   display: none;
 }
 

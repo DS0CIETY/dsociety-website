@@ -10,20 +10,16 @@ export const Home = () => {
         </h2>
         <p className="intro__description">
           Создать все с нуля? Изменить то что уже есть? В любом случае нужно что-то менять в лучшую сторону, ведь все мы
-          являемся частью нашего общества.
+          являемся частью этого общества.
         </p>
       </section>
 
       <section className="about">
         <h2 className="about__title">О нас</h2>
         <p className="about__description">
-          Just a group of those who want to change or create something. No matter your ability, you can do anything for
-          our world. Everyone has their own way, you just need to find it. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Earum inventore vel deleniti omnis porro adipisci eos numquam!
-        </p>
-        <p className="about__description">
-          Explicabo mollitia eveniet rerum eius, nisi corrupti esse consequuntur consequatur repellendus reiciendis
-          voluptatem exercitationem voluptatibus illum maiores adipisci!
+          Группа тех, кто хочет что-то изменить или создать. Независимо от ваших способностей, вы можете сделать
+          что-нибудь полезное. У каждого есть опыт, знания и навыки в какой-либо области, которые могут улучшить жизнь
+          других людей.
         </p>
       </section>
 

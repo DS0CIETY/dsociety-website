@@ -20,7 +20,7 @@ footer::after {
   flex-wrap: wrap;
   justify-content: center;
   list-style: none;
-  font-size: 1.4em;
+  font-size: 1em;
 }
 
 .footer__link-list li {
