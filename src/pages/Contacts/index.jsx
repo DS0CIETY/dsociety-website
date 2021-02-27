@@ -11,15 +11,24 @@ export const Contacts = () => {
   const [modalIsVisible, setModalIsVisible] = useState(false);
   const [isCorrectData, setIsCorrectData] = useState(false);
 
-  /**
-   * TODO: regexp checking for email, tg name
-   */
-
   useEffect(() => {
     if (userName && userMessage) {
-      setIsCorrectData(true);
+      const userNameRegExp = /^@.+/;
+      const emailRegExp = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+
+      const nameIsCorrect = userName.match(userNameRegExp);
+      // email is unimportant field
+      const emailIsCorrect = userEmail ? userEmail.match(emailRegExp) : true;
+
+      if (nameIsCorrect && emailIsCorrect) {
+        setIsCorrectData(true);
+      } else {
+        setIsCorrectData(false);
+      }
+    } else {
+      setIsCorrectData(false);
     }
-  }, [userName, userMessage]);
+  }, [userName, userEmail, userMessage]);
 
   return (
     <section className="Contacts">

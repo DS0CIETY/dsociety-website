@@ -80,6 +80,44 @@ body {
   padding: 0;
 }
 
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #222;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #356bff;
+}
+
+/* ************************************** */
+/*                Common                  */
+/* ************************************** */
+
 section {
   padding: 2rem 14%;
+}
+
+header,
+footer {
+  padding: 1rem 14%;
+}
+
+@media all and (max-width: 950px) {
+  section {
+    padding: 2rem 7%;
+  }
+
+  header,
+  footer {
+    padding: 1rem 7%;
+  }
+}
+
+@media all and (max-width: 600px) {
+  body {
+    font-size: 0.9em;
+  }
 }
