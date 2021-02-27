@@ -20,27 +20,24 @@ export const Home = () => {
         <div className="important__block">
           <h3 className="important__block-subtitle">Равенство</h3>
           <p className="important__block-description">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus, quisquam blanditiis veniam libero
-            laboriosam quos cumque officiis ad adipisci non beatae ipsum error eius voluptatem exercitationem temporibus
-            nam nobis praesentium.
+            Рвенство не по умственным или физическим способностям, а по правам и условиям жизни. В настоящий момент во
+            многом это не так. Необходимо убрать дискриминацию в отношении других людей и следовать более объективным
+            оценкам.
           </p>
         </div>
         <div className="important__block">
           <h3 className="important__block-subtitle">Саморазвитие</h3>
           <p className="important__block-description">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus, quisquam blanditiis veniam libero
-            laboriosa adipisci non beatae ipsum error eius voluptatem exercitationem temporibus nam nobis praesentium.
+            Развитие и улучшение полноценного общества получается из развития каждого его участника. Обучаясь и помогая
+            другим мы будем двигаться быстрее. Это лучшая стратегия если вы не один.
           </p>
         </div>
         <div className="important__block">
           <h3 className="important__block-subtitle">Доверие</h3>
           <p className="important__block-description">
-            Ни один человек не способен знать все области и темы. Также мы не можем жить в обществе в состоянии "доверяй
-            только себе". Конечно мы можем не доверять друг другу, но тогда нормального общества не будет (если это
-            можно назвать обществом). К сожелению на данный момент слишком много мнений среди которых приходиться
-            выбирать. И многие пользуются этим не из хороших побуждений. Поэтому нам нужно доверие при котором мы можем
-            с уверенность развиваться в "своей области", делиться объективными, корректными знаниями, зная что другие
-            люди делают, то же самое.
+            Ни один человек не способен знать все области и темы. Также не выйдет плодотворного окружения в состоянии
+            "доверяй только себе". Нам нужно доверие при котором мы можем с уверенность развиваться в "своей области" и
+            делиться объективными, корректными знаниями, зная что другие люди делают то же самое.
           </p>
         </div>
       </section>
@@ -48,9 +45,9 @@ export const Home = () => {
       <section className="about">
         <h2 className="about__title">О нас</h2>
         <p className="about__description">
-          Группа тех, кто хочет что-то изменить или создать. Независимо от ваших способностей, вы можете сделать
-          что-нибудь полезное. У каждого есть опыт, знания и навыки в какой-либо области, которые могут улучшить жизнь
-          других людей.
+          Те кто хочет развивать и улучшать наше общество. Мы считаем что независимо от ваших способностей, вы можете
+          сделать что-нибудь полезное. У каждого есть опыт, знания и навыки в какой-либо области, которые помогут ь
+          другим людям.
         </p>
       </section>
     </section>

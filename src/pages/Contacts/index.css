@@ -47,7 +47,8 @@
   margin-bottom: 1.6em;
 }
 
-.Contacts__form-input.unimportant {
+.Contacts__form-input.unimportant,
+.Contacts__form-textarea.unimportant {
   border-color: var(--transparent);
 }
 
@@ -65,11 +66,23 @@
   margin-top: 3.2em;
   font-weight: 500;
   color: var(--brand-color);
-  letter-spacing: 0.4em;
+  background-color: var(--background-color);
+  letter-spacing: 0.2em;
 }
 
 .Contacts__form-btn-submit:hover,
 .Contacts__form-btn-submit:focus {
   background-color: var(--brand-color);
   color: var(--background-color);
+}
+
+/* Wrong form data = button disable */
+
+.Contacts__form-btn-submit.disable,
+.Contacts__form-btn-submit.disable:hover,
+.Contacts__form-btn-submit.disable:focus {
+  color: var(--brand-color);
+  background-color: var(--background-color);
+  cursor: not-allowed;
+  opacity: 0.5;
 }

@@ -1,5 +1,6 @@
 footer {
   position: relative;
+  padding: 1rem 14%;
 }
 
 footer::after {
@@ -29,6 +30,6 @@ footer::after {
 
 .footer__copyright {
   margin: 0;
-  padding: 1.4em 0 3em;
+  padding: 1.4em 0 2em;
   text-align: center;
 }

@@ -2,6 +2,8 @@ import './index.css';
 import { Link } from '../Link';
 
 export const Footer = () => {
+  const year = new Date().getFullYear();
+
   return (
     <footer>
       <ul className="footer__link-list">
@@ -21,8 +23,8 @@ export const Footer = () => {
           <Link href="mailto:ds0c1ety@protonmail.ch">Email</Link>
         </li>
       </ul>
-      {/* change year (adaptive) */}
-      <p className="footer__copyright">© 2021 DCOSIETY</p>
+
+      <p className="footer__copyright">© {year} DCOSIETY</p>
     </footer>
   );
 };
